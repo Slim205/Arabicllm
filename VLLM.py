@@ -1,11 +1,9 @@
 from vllm import LLM, SamplingParams
 from multiprocessing import freeze_support, set_start_method
-import ray, torch
+import ray,torch
 
-ray.shutdown()
-
-ray.init(num_gpus=torch.cuda.device_count())
-print(torch.cuda.device_count())
+num_gpus= torch.cuda.device_count()
+print(num_gpus)
 
 prompts = [
     "Hello, my name is",
@@ -21,7 +19,7 @@ model_id ="meta-llama/Meta-Llama-3-70B-Instruct"
 
 def try_llm(model_id) :
 
-    llm = LLM(model=model_id,tensor_parallel_size=torch.cuda.device_count(),enforce_eager=True,dtype= torch.float16)
+    llm = LLM(model=model_id,tensor_parallel_size=num_gpus,enforce_eager=True,distributed_executor_backend='ray')
     outputs = llm.generate(prompts, sampling_params)
     for output in outputs:
         prompt = output.prompt
@@ -30,6 +28,9 @@ def try_llm(model_id) :
 
 
 if __name__ == '__main__':
-    freeze_support()
-    set_start_method('spawn')
+   # freeze_support()
+  #  set_start_method('spawn')
+    ray.init(num_gpus=num_gpus)
     try_llm(model_id)
+    ray.shutdown()
+
