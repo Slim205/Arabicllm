@@ -1,2 +1,0 @@
-[console_scripts]
-lighteval = lighteval.commands.lighteval_cli:main

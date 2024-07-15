@@ -1,0 +1,2950 @@
+{
+  "config_general": {
+    "lighteval_sha": "4d8c620733802aba964d87aafb12739c8f72bc7d",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 32,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 70598.360382986,
+    "end_time": 70989.827366708,
+    "total_evaluation_time_secondes": "391.46698372201354",
+    "model_name": "EleutherAI/pythia-70m",
+    "model_sha": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "model_dtype": "torch.float16",
+    "model_size": "138.83 MB",
+    "config": null
+  },
+  "results": {
+    "community|arabic_mmlu:abstract_algebra|5": {
+      "acc_norm": 0.22,
+      "acc_norm_stderr": 0.04163331998932268
+    },
+    "community|arabic_mmlu:anatomy|5": {
+      "acc_norm": 0.21481481481481482,
+      "acc_norm_stderr": 0.03547854198560823
+    },
+    "community|arabic_mmlu:astronomy|5": {
+      "acc_norm": 0.17763157894736842,
+      "acc_norm_stderr": 0.031103182383123398
+    },
+    "community|arabic_mmlu:business_ethics|5": {
+      "acc_norm": 0.3,
+      "acc_norm_stderr": 0.046056618647183814
+    },
+    "community|arabic_mmlu:clinical_knowledge|5": {
+      "acc_norm": 0.22641509433962265,
+      "acc_norm_stderr": 0.025757559893106744
+    },
+    "community|arabic_mmlu:college_biology|5": {
+      "acc_norm": 0.1875,
+      "acc_norm_stderr": 0.032639560491693344
+    },
+    "community|arabic_mmlu:college_chemistry|5": {
+      "acc_norm": 0.2,
+      "acc_norm_stderr": 0.04020151261036845
+    },
+    "community|arabic_mmlu:college_computer_science|5": {
+      "acc_norm": 0.19,
+      "acc_norm_stderr": 0.03942772444036623
+    },
+    "community|arabic_mmlu:college_mathematics|5": {
+      "acc_norm": 0.24,
+      "acc_norm_stderr": 0.042923469599092816
+    },
+    "community|arabic_mmlu:college_medicine|5": {
+      "acc_norm": 0.20809248554913296,
+      "acc_norm_stderr": 0.030952890217749874
+    },
+    "community|arabic_mmlu:college_physics|5": {
+      "acc_norm": 0.21568627450980393,
+      "acc_norm_stderr": 0.04092563958237654
+    },
+    "community|arabic_mmlu:computer_security|5": {
+      "acc_norm": 0.26,
+      "acc_norm_stderr": 0.04408440022768078
+    },
+    "community|arabic_mmlu:conceptual_physics|5": {
+      "acc_norm": 0.26382978723404255,
+      "acc_norm_stderr": 0.028809989854102973
+    },
+    "community|arabic_mmlu:econometrics|5": {
+      "acc_norm": 0.2543859649122807,
+      "acc_norm_stderr": 0.040969851398436695
+    },
+    "community|arabic_mmlu:electrical_engineering|5": {
+      "acc_norm": 0.2413793103448276,
+      "acc_norm_stderr": 0.03565998174135302
+    },
+    "community|arabic_mmlu:elementary_mathematics|5": {
+      "acc_norm": 0.2566137566137566,
+      "acc_norm_stderr": 0.022494510767503154
+    },
+    "community|arabic_mmlu:formal_logic|5": {
+      "acc_norm": 0.20634920634920634,
+      "acc_norm_stderr": 0.03619604524124248
+    },
+    "community|arabic_mmlu:global_facts|5": {
+      "acc_norm": 0.18,
+      "acc_norm_stderr": 0.038612291966536934
+    },
+    "community|arabic_mmlu:high_school_biology|5": {
+      "acc_norm": 0.18064516129032257,
+      "acc_norm_stderr": 0.021886178567172548
+    },
+    "community|arabic_mmlu:high_school_chemistry|5": {
+      "acc_norm": 0.29064039408866993,
+      "acc_norm_stderr": 0.0319474007226554
+    },
+    "community|arabic_mmlu:high_school_computer_science|5": {
+      "acc_norm": 0.3,
+      "acc_norm_stderr": 0.046056618647183814
+    },
+    "community|arabic_mmlu:high_school_european_history|5": {
+      "acc_norm": 0.21818181818181817,
+      "acc_norm_stderr": 0.03225078108306289
+    },
+    "community|arabic_mmlu:high_school_geography|5": {
+      "acc_norm": 0.19696969696969696,
+      "acc_norm_stderr": 0.028335609732463348
+    },
+    "community|arabic_mmlu:high_school_government_and_politics|5": {
+      "acc_norm": 0.23834196891191708,
+      "acc_norm_stderr": 0.030748905363909878
+    },
+    "community|arabic_mmlu:high_school_macroeconomics|5": {
+      "acc_norm": 0.20512820512820512,
+      "acc_norm_stderr": 0.02047323317355198
+    },
+    "community|arabic_mmlu:high_school_mathematics|5": {
+      "acc_norm": 0.24814814814814815,
+      "acc_norm_stderr": 0.0263357394040558
+    },
+    "community|arabic_mmlu:high_school_microeconomics|5": {
+      "acc_norm": 0.2184873949579832,
+      "acc_norm_stderr": 0.02684151432295894
+    },
+    "community|arabic_mmlu:high_school_physics|5": {
+      "acc_norm": 0.1986754966887417,
+      "acc_norm_stderr": 0.03257847384436775
+    },
+    "community|arabic_mmlu:high_school_psychology|5": {
+      "acc_norm": 0.1944954128440367,
+      "acc_norm_stderr": 0.01697028909045805
+    },
+    "community|arabic_mmlu:high_school_statistics|5": {
+      "acc_norm": 0.4537037037037037,
+      "acc_norm_stderr": 0.03395322726375798
+    },
+    "community|arabic_mmlu:high_school_us_history|5": {
+      "acc_norm": 0.23039215686274508,
+      "acc_norm_stderr": 0.029554292605695066
+    },
+    "community|arabic_mmlu:high_school_world_history|5": {
+      "acc_norm": 0.25316455696202533,
+      "acc_norm_stderr": 0.028304657943035313
+    },
+    "community|arabic_mmlu:human_aging|5": {
+      "acc_norm": 0.31390134529147984,
+      "acc_norm_stderr": 0.031146796482972465
+    },
+    "community|arabic_mmlu:human_sexuality|5": {
+      "acc_norm": 0.2595419847328244,
+      "acc_norm_stderr": 0.03844876139785271
+    },
+    "community|arabic_mmlu:international_law|5": {
+      "acc_norm": 0.2396694214876033,
+      "acc_norm_stderr": 0.03896878985070417
+    },
+    "community|arabic_mmlu:jurisprudence|5": {
+      "acc_norm": 0.26851851851851855,
+      "acc_norm_stderr": 0.04284467968052192
+    },
+    "community|arabic_mmlu:logical_fallacies|5": {
+      "acc_norm": 0.20245398773006135,
+      "acc_norm_stderr": 0.031570650789119026
+    },
+    "community|arabic_mmlu:machine_learning|5": {
+      "acc_norm": 0.3125,
+      "acc_norm_stderr": 0.043994650575715215
+    },
+    "community|arabic_mmlu:management|5": {
+      "acc_norm": 0.17475728155339806,
+      "acc_norm_stderr": 0.037601780060266224
+    },
+    "community|arabic_mmlu:marketing|5": {
+      "acc_norm": 0.20085470085470086,
+      "acc_norm_stderr": 0.02624677294689048
+    },
+    "community|arabic_mmlu:medical_genetics|5": {
+      "acc_norm": 0.3,
+      "acc_norm_stderr": 0.046056618647183814
+    },
+    "community|arabic_mmlu:miscellaneous|5": {
+      "acc_norm": 0.23627075351213284,
+      "acc_norm_stderr": 0.0151904737170375
+    },
+    "community|arabic_mmlu:moral_disputes|5": {
+      "acc_norm": 0.24855491329479767,
+      "acc_norm_stderr": 0.023267528432100174
+    },
+    "community|arabic_mmlu:moral_scenarios|5": {
+      "acc_norm": 0.23798882681564246,
+      "acc_norm_stderr": 0.014242630070574915
+    },
+    "community|arabic_mmlu:nutrition|5": {
+      "acc_norm": 0.23202614379084968,
+      "acc_norm_stderr": 0.02417084087934101
+    },
+    "community|arabic_mmlu:philosophy|5": {
+      "acc_norm": 0.1864951768488746,
+      "acc_norm_stderr": 0.02212243977248077
+    },
+    "community|arabic_mmlu:prehistory|5": {
+      "acc_norm": 0.21604938271604937,
+      "acc_norm_stderr": 0.022899162918445806
+    },
+    "community|arabic_mmlu:professional_accounting|5": {
+      "acc_norm": 0.2553191489361702,
+      "acc_norm_stderr": 0.026011992930902006
+    },
+    "community|arabic_mmlu:professional_law|5": {
+      "acc_norm": 0.21707953063885269,
+      "acc_norm_stderr": 0.010529243841561363
+    },
+    "community|arabic_mmlu:professional_medicine|5": {
+      "acc_norm": 0.29044117647058826,
+      "acc_norm_stderr": 0.02757646862274053
+    },
+    "community|arabic_mmlu:professional_psychology|5": {
+      "acc_norm": 0.25,
+      "acc_norm_stderr": 0.01751781884501444
+    },
+    "community|arabic_mmlu:public_relations|5": {
+      "acc_norm": 0.22727272727272727,
+      "acc_norm_stderr": 0.04013964554072775
+    },
+    "community|arabic_mmlu:security_studies|5": {
+      "acc_norm": 0.17959183673469387,
+      "acc_norm_stderr": 0.024573293589585637
+    },
+    "community|arabic_mmlu:sociology|5": {
+      "acc_norm": 0.24378109452736318,
+      "acc_norm_stderr": 0.03036049015401465
+    },
+    "community|arabic_mmlu:us_foreign_policy|5": {
+      "acc_norm": 0.27,
+      "acc_norm_stderr": 0.044619604333847394
+    },
+    "community|arabic_mmlu:virology|5": {
+      "acc_norm": 0.28313253012048195,
+      "acc_norm_stderr": 0.03507295431370518
+    },
+    "community|arabic_mmlu:world_religions|5": {
+      "acc_norm": 0.21052631578947367,
+      "acc_norm_stderr": 0.0312678171466318
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "acc": 0.46790205162144277,
+      "acc_stderr": 0.01284058450398202
+    },
+    "community|arabic_mmlu:_average|5": {
+      "acc_norm": 0.2373052488770203,
+      "acc_norm_stderr": 0.03169484067265112
+    },
+    "all": {
+      "acc_norm": 0.2373052488770203,
+      "acc_norm_stderr": 0.03169484067265112,
+      "acc": 0.46790205162144277,
+      "acc_stderr": 0.01284058450398202
+    }
+  },
+  "versions": {
+    "community|arabic_mmlu:abstract_algebra|5": 0,
+    "community|arabic_mmlu:anatomy|5": 0,
+    "community|arabic_mmlu:astronomy|5": 0,
+    "community|arabic_mmlu:business_ethics|5": 0,
+    "community|arabic_mmlu:clinical_knowledge|5": 0,
+    "community|arabic_mmlu:college_biology|5": 0,
+    "community|arabic_mmlu:college_chemistry|5": 0,
+    "community|arabic_mmlu:college_computer_science|5": 0,
+    "community|arabic_mmlu:college_mathematics|5": 0,
+    "community|arabic_mmlu:college_medicine|5": 0,
+    "community|arabic_mmlu:college_physics|5": 0,
+    "community|arabic_mmlu:computer_security|5": 0,
+    "community|arabic_mmlu:conceptual_physics|5": 0,
+    "community|arabic_mmlu:econometrics|5": 0,
+    "community|arabic_mmlu:electrical_engineering|5": 0,
+    "community|arabic_mmlu:elementary_mathematics|5": 0,
+    "community|arabic_mmlu:formal_logic|5": 0,
+    "community|arabic_mmlu:global_facts|5": 0,
+    "community|arabic_mmlu:high_school_biology|5": 0,
+    "community|arabic_mmlu:high_school_chemistry|5": 0,
+    "community|arabic_mmlu:high_school_computer_science|5": 0,
+    "community|arabic_mmlu:high_school_european_history|5": 0,
+    "community|arabic_mmlu:high_school_geography|5": 0,
+    "community|arabic_mmlu:high_school_government_and_politics|5": 0,
+    "community|arabic_mmlu:high_school_macroeconomics|5": 0,
+    "community|arabic_mmlu:high_school_mathematics|5": 0,
+    "community|arabic_mmlu:high_school_microeconomics|5": 0,
+    "community|arabic_mmlu:high_school_physics|5": 0,
+    "community|arabic_mmlu:high_school_psychology|5": 0,
+    "community|arabic_mmlu:high_school_statistics|5": 0,
+    "community|arabic_mmlu:high_school_us_history|5": 0,
+    "community|arabic_mmlu:high_school_world_history|5": 0,
+    "community|arabic_mmlu:human_aging|5": 0,
+    "community|arabic_mmlu:human_sexuality|5": 0,
+    "community|arabic_mmlu:international_law|5": 0,
+    "community|arabic_mmlu:jurisprudence|5": 0,
+    "community|arabic_mmlu:logical_fallacies|5": 0,
+    "community|arabic_mmlu:machine_learning|5": 0,
+    "community|arabic_mmlu:management|5": 0,
+    "community|arabic_mmlu:marketing|5": 0,
+    "community|arabic_mmlu:medical_genetics|5": 0,
+    "community|arabic_mmlu:miscellaneous|5": 0,
+    "community|arabic_mmlu:moral_disputes|5": 0,
+    "community|arabic_mmlu:moral_scenarios|5": 0,
+    "community|arabic_mmlu:nutrition|5": 0,
+    "community|arabic_mmlu:philosophy|5": 0,
+    "community|arabic_mmlu:prehistory|5": 0,
+    "community|arabic_mmlu:professional_accounting|5": 0,
+    "community|arabic_mmlu:professional_law|5": 0,
+    "community|arabic_mmlu:professional_medicine|5": 0,
+    "community|arabic_mmlu:professional_psychology|5": 0,
+    "community|arabic_mmlu:public_relations|5": 0,
+    "community|arabic_mmlu:security_studies|5": 0,
+    "community|arabic_mmlu:sociology|5": 0,
+    "community|arabic_mmlu:us_foreign_policy|5": 0,
+    "community|arabic_mmlu:virology|5": 0,
+    "community|arabic_mmlu:world_religions|5": 0,
+    "lighteval|xstory_cloze:ar|0": 0
+  },
+  "config_tasks": {
+    "community|arabic_mmlu:abstract_algebra": {
+      "name": "arabic_mmlu:abstract_algebra",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "abstract_algebra",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:anatomy": {
+      "name": "arabic_mmlu:anatomy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "anatomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 135,
+      "effective_num_docs": 135,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:astronomy": {
+      "name": "arabic_mmlu:astronomy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "astronomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 152,
+      "effective_num_docs": 152,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:business_ethics": {
+      "name": "arabic_mmlu:business_ethics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "business_ethics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:clinical_knowledge": {
+      "name": "arabic_mmlu:clinical_knowledge",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "clinical_knowledge",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 265,
+      "effective_num_docs": 265,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_biology": {
+      "name": "arabic_mmlu:college_biology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_biology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 144,
+      "effective_num_docs": 144,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_chemistry": {
+      "name": "arabic_mmlu:college_chemistry",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_chemistry",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_computer_science": {
+      "name": "arabic_mmlu:college_computer_science",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_computer_science",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_mathematics": {
+      "name": "arabic_mmlu:college_mathematics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_mathematics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_medicine": {
+      "name": "arabic_mmlu:college_medicine",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_medicine",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 173,
+      "effective_num_docs": 173,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:college_physics": {
+      "name": "arabic_mmlu:college_physics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "college_physics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 102,
+      "effective_num_docs": 102,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:computer_security": {
+      "name": "arabic_mmlu:computer_security",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "computer_security",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:conceptual_physics": {
+      "name": "arabic_mmlu:conceptual_physics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "conceptual_physics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 235,
+      "effective_num_docs": 235,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:econometrics": {
+      "name": "arabic_mmlu:econometrics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "econometrics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 114,
+      "effective_num_docs": 114,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:electrical_engineering": {
+      "name": "arabic_mmlu:electrical_engineering",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "electrical_engineering",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:elementary_mathematics": {
+      "name": "arabic_mmlu:elementary_mathematics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "elementary_mathematics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 378,
+      "effective_num_docs": 378,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:formal_logic": {
+      "name": "arabic_mmlu:formal_logic",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "formal_logic",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 126,
+      "effective_num_docs": 126,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:global_facts": {
+      "name": "arabic_mmlu:global_facts",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "global_facts",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_biology": {
+      "name": "arabic_mmlu:high_school_biology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_biology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 310,
+      "effective_num_docs": 310,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_chemistry": {
+      "name": "arabic_mmlu:high_school_chemistry",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_chemistry",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 203,
+      "effective_num_docs": 203,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_computer_science": {
+      "name": "arabic_mmlu:high_school_computer_science",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_computer_science",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_european_history": {
+      "name": "arabic_mmlu:high_school_european_history",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_european_history",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 165,
+      "effective_num_docs": 165,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_geography": {
+      "name": "arabic_mmlu:high_school_geography",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_geography",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 198,
+      "effective_num_docs": 198,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_government_and_politics": {
+      "name": "arabic_mmlu:high_school_government_and_politics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_government_and_politics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 193,
+      "effective_num_docs": 193,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_macroeconomics": {
+      "name": "arabic_mmlu:high_school_macroeconomics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_macroeconomics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 390,
+      "effective_num_docs": 390,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_mathematics": {
+      "name": "arabic_mmlu:high_school_mathematics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_mathematics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 270,
+      "effective_num_docs": 270,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_microeconomics": {
+      "name": "arabic_mmlu:high_school_microeconomics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_microeconomics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 238,
+      "effective_num_docs": 238,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_physics": {
+      "name": "arabic_mmlu:high_school_physics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_physics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 151,
+      "effective_num_docs": 151,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_psychology": {
+      "name": "arabic_mmlu:high_school_psychology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_psychology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 545,
+      "effective_num_docs": 545,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_statistics": {
+      "name": "arabic_mmlu:high_school_statistics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_statistics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 216,
+      "effective_num_docs": 216,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_us_history": {
+      "name": "arabic_mmlu:high_school_us_history",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_us_history",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 204,
+      "effective_num_docs": 204,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:high_school_world_history": {
+      "name": "arabic_mmlu:high_school_world_history",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "high_school_world_history",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 237,
+      "effective_num_docs": 237,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:human_aging": {
+      "name": "arabic_mmlu:human_aging",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "human_aging",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 223,
+      "effective_num_docs": 223,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:human_sexuality": {
+      "name": "arabic_mmlu:human_sexuality",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "human_sexuality",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 131,
+      "effective_num_docs": 131,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:international_law": {
+      "name": "arabic_mmlu:international_law",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "international_law",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 121,
+      "effective_num_docs": 121,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:jurisprudence": {
+      "name": "arabic_mmlu:jurisprudence",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "jurisprudence",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 108,
+      "effective_num_docs": 108,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:logical_fallacies": {
+      "name": "arabic_mmlu:logical_fallacies",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "logical_fallacies",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 163,
+      "effective_num_docs": 163,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:machine_learning": {
+      "name": "arabic_mmlu:machine_learning",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "machine_learning",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 112,
+      "effective_num_docs": 112,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:management": {
+      "name": "arabic_mmlu:management",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "management",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 103,
+      "effective_num_docs": 103,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:marketing": {
+      "name": "arabic_mmlu:marketing",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "marketing",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 234,
+      "effective_num_docs": 234,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:medical_genetics": {
+      "name": "arabic_mmlu:medical_genetics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "medical_genetics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:miscellaneous": {
+      "name": "arabic_mmlu:miscellaneous",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "miscellaneous",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 783,
+      "effective_num_docs": 783,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:moral_disputes": {
+      "name": "arabic_mmlu:moral_disputes",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "moral_disputes",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 346,
+      "effective_num_docs": 346,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:moral_scenarios": {
+      "name": "arabic_mmlu:moral_scenarios",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "moral_scenarios",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 895,
+      "effective_num_docs": 895,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:nutrition": {
+      "name": "arabic_mmlu:nutrition",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "nutrition",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 306,
+      "effective_num_docs": 306,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:philosophy": {
+      "name": "arabic_mmlu:philosophy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "philosophy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 311,
+      "effective_num_docs": 311,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:prehistory": {
+      "name": "arabic_mmlu:prehistory",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "prehistory",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 324,
+      "effective_num_docs": 324,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:professional_accounting": {
+      "name": "arabic_mmlu:professional_accounting",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "professional_accounting",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 282,
+      "effective_num_docs": 282,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:professional_law": {
+      "name": "arabic_mmlu:professional_law",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "professional_law",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 1534,
+      "effective_num_docs": 1534,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:professional_medicine": {
+      "name": "arabic_mmlu:professional_medicine",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "professional_medicine",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 272,
+      "effective_num_docs": 272,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:professional_psychology": {
+      "name": "arabic_mmlu:professional_psychology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "professional_psychology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 612,
+      "effective_num_docs": 612,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:public_relations": {
+      "name": "arabic_mmlu:public_relations",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "public_relations",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 110,
+      "effective_num_docs": 110,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:security_studies": {
+      "name": "arabic_mmlu:security_studies",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "security_studies",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 245,
+      "effective_num_docs": 245,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:sociology": {
+      "name": "arabic_mmlu:sociology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "sociology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 201,
+      "effective_num_docs": 201,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:us_foreign_policy": {
+      "name": "arabic_mmlu:us_foreign_policy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "us_foreign_policy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:virology": {
+      "name": "arabic_mmlu:virology",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "virology",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 166,
+      "effective_num_docs": 166,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:world_religions": {
+      "name": "arabic_mmlu:world_religions",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "world_religions",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 171,
+      "effective_num_docs": 171,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "lighteval|xstory_cloze:ar": {
+      "name": "xstory_cloze:ar",
+      "prompt_function": "storycloze",
+      "hf_repo": "juletxara/xstory_cloze",
+      "hf_subset": "ar",
+      "metric": [
+        "loglikelihood_acc"
+      ],
+      "hf_avail_splits": [
+        "training",
+        "eval"
+      ],
+      "evaluation_splits": [
+        "eval"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "lighteval"
+      ],
+      "original_num_docs": 1511,
+      "effective_num_docs": 1511,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|arabic_mmlu:abstract_algebra|5": {
+      "hashes": {
+        "hash_examples": "f2ddca8f45c0a511",
+        "hash_full_prompts": "7dae76e9c966c8ee",
+        "hash_input_tokens": "79f96bde006af240",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:anatomy|5": {
+      "hashes": {
+        "hash_examples": "dfdbc1b83107668d",
+        "hash_full_prompts": "96b301d0d23a23b2",
+        "hash_input_tokens": "fec6f369bf87a050",
+        "hash_cont_tokens": "6a127e3751ad29f6"
+      },
+      "truncated": 0,
+      "non_truncated": 135,
+      "padded": 540,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:astronomy|5": {
+      "hashes": {
+        "hash_examples": "9736a606002a848e",
+        "hash_full_prompts": "18aab550cbf246fb",
+        "hash_input_tokens": "1fb243c5038dbcc6",
+        "hash_cont_tokens": "2f180704eb172de3"
+      },
+      "truncated": 0,
+      "non_truncated": 152,
+      "padded": 608,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:business_ethics|5": {
+      "hashes": {
+        "hash_examples": "735e452fbb6dc63d",
+        "hash_full_prompts": "0b6d539453c08221",
+        "hash_input_tokens": "f2d94ad449634bfd",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:clinical_knowledge|5": {
+      "hashes": {
+        "hash_examples": "6ab0ca4da98aedcf",
+        "hash_full_prompts": "35e95a711827936f",
+        "hash_input_tokens": "9ae609e4de87af48",
+        "hash_cont_tokens": "00e2f8852b27427f"
+      },
+      "truncated": 0,
+      "non_truncated": 265,
+      "padded": 1060,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_biology|5": {
+      "hashes": {
+        "hash_examples": "17e4e390848018a4",
+        "hash_full_prompts": "27484c8bd9570e0e",
+        "hash_input_tokens": "792368ee8629d1b5",
+        "hash_cont_tokens": "e4079e39a2231afd"
+      },
+      "truncated": 0,
+      "non_truncated": 144,
+      "padded": 576,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_chemistry|5": {
+      "hashes": {
+        "hash_examples": "4abb169f6dfd234b",
+        "hash_full_prompts": "bb78f6101049e7f6",
+        "hash_input_tokens": "a4d7aeb9b9477175",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_computer_science|5": {
+      "hashes": {
+        "hash_examples": "a369e2e941358a1e",
+        "hash_full_prompts": "154a49a7f108784b",
+        "hash_input_tokens": "58a22e33d6fa49d6",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_mathematics|5": {
+      "hashes": {
+        "hash_examples": "d7be03b8b6020bff",
+        "hash_full_prompts": "e6a4d0be1daf1046",
+        "hash_input_tokens": "f63285033a73442f",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_medicine|5": {
+      "hashes": {
+        "hash_examples": "0518a00f097346bf",
+        "hash_full_prompts": "77eb0c4b4114f286",
+        "hash_input_tokens": "a0222f39511c65fa",
+        "hash_cont_tokens": "3ecf4367ea1e0c37"
+      },
+      "truncated": 0,
+      "non_truncated": 173,
+      "padded": 692,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:college_physics|5": {
+      "hashes": {
+        "hash_examples": "5d842cd49bc70e12",
+        "hash_full_prompts": "790ba8d9706901f1",
+        "hash_input_tokens": "c6e10a5bb9ca0334",
+        "hash_cont_tokens": "1c14b85441847de4"
+      },
+      "truncated": 0,
+      "non_truncated": 102,
+      "padded": 408,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:computer_security|5": {
+      "hashes": {
+        "hash_examples": "8e85d9f85be9b32f",
+        "hash_full_prompts": "82e46497a611b83c",
+        "hash_input_tokens": "33b411a82b4519e2",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:conceptual_physics|5": {
+      "hashes": {
+        "hash_examples": "7964b55a0a49502b",
+        "hash_full_prompts": "7ba8d0ef2ee4c1ad",
+        "hash_input_tokens": "36f6800e9083bbf3",
+        "hash_cont_tokens": "93cd403a66c5d88b"
+      },
+      "truncated": 0,
+      "non_truncated": 235,
+      "padded": 940,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:econometrics|5": {
+      "hashes": {
+        "hash_examples": "1e192eae38347257",
+        "hash_full_prompts": "aaf20c2b20aa94cb",
+        "hash_input_tokens": "b3659d42ef209431",
+        "hash_cont_tokens": "74f78a213a884a78"
+      },
+      "truncated": 0,
+      "non_truncated": 114,
+      "padded": 456,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:electrical_engineering|5": {
+      "hashes": {
+        "hash_examples": "cf97671d5c441da1",
+        "hash_full_prompts": "0be6a375839169cf",
+        "hash_input_tokens": "6f1519e966f5a2c2",
+        "hash_cont_tokens": "2e79aec76a381b2a"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 580,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:elementary_mathematics|5": {
+      "hashes": {
+        "hash_examples": "6f49107ed43c40c5",
+        "hash_full_prompts": "40389b2e90ff570d",
+        "hash_input_tokens": "26e5d08902ccfd97",
+        "hash_cont_tokens": "d8c7fe4f87550bdc"
+      },
+      "truncated": 0,
+      "non_truncated": 378,
+      "padded": 1512,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:formal_logic|5": {
+      "hashes": {
+        "hash_examples": "7922c376008ba77b",
+        "hash_full_prompts": "fdb00d752feca5dc",
+        "hash_input_tokens": "e66953deb1c0fb9f",
+        "hash_cont_tokens": "c9e0f3f2ad90c9cd"
+      },
+      "truncated": 0,
+      "non_truncated": 126,
+      "padded": 504,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:global_facts|5": {
+      "hashes": {
+        "hash_examples": "11f9813185047d5b",
+        "hash_full_prompts": "c77b6431a7de1a69",
+        "hash_input_tokens": "c8ea6f6961eac9c0",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_biology|5": {
+      "hashes": {
+        "hash_examples": "2a804b1d90cbe66e",
+        "hash_full_prompts": "73da779f407e8b11",
+        "hash_input_tokens": "c0397a35e9655c56",
+        "hash_cont_tokens": "92adf8c8d0464e73"
+      },
+      "truncated": 0,
+      "non_truncated": 310,
+      "padded": 1240,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_chemistry|5": {
+      "hashes": {
+        "hash_examples": "0032168adabc53b4",
+        "hash_full_prompts": "f32312ef923f9535",
+        "hash_input_tokens": "ad46f999c1b84a03",
+        "hash_cont_tokens": "ab29c5938da6d3ee"
+      },
+      "truncated": 0,
+      "non_truncated": 203,
+      "padded": 812,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_computer_science|5": {
+      "hashes": {
+        "hash_examples": "f2fb8740f9df980f",
+        "hash_full_prompts": "503becb3ca3fa1fd",
+        "hash_input_tokens": "ba76d8ed9f8c6b4e",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 4.69,
+      "num_truncated_few_shots": 31
+    },
+    "community|arabic_mmlu:high_school_european_history|5": {
+      "hashes": {
+        "hash_examples": "73509021e7e66435",
+        "hash_full_prompts": "87a2b1b5bd581c69",
+        "hash_input_tokens": "260ec12166815a57",
+        "hash_cont_tokens": "48cd42646426b244"
+      },
+      "truncated": 0,
+      "non_truncated": 165,
+      "padded": 660,
+      "non_padded": 0,
+      "effective_few_shots": 4.945454545454545,
+      "num_truncated_few_shots": 5
+    },
+    "community|arabic_mmlu:high_school_geography|5": {
+      "hashes": {
+        "hash_examples": "9e08d1894940ff42",
+        "hash_full_prompts": "f4585f814c7f4de2",
+        "hash_input_tokens": "b00cd7bb92989988",
+        "hash_cont_tokens": "518bd174dc08b93e"
+      },
+      "truncated": 0,
+      "non_truncated": 198,
+      "padded": 792,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_government_and_politics|5": {
+      "hashes": {
+        "hash_examples": "64b7e97817ca6c76",
+        "hash_full_prompts": "add1904e5a48de31",
+        "hash_input_tokens": "0b94eed080484e2b",
+        "hash_cont_tokens": "758b1993b1369354"
+      },
+      "truncated": 0,
+      "non_truncated": 193,
+      "padded": 772,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_macroeconomics|5": {
+      "hashes": {
+        "hash_examples": "9f582da8534bd2ef",
+        "hash_full_prompts": "6ec9972b6419a57d",
+        "hash_input_tokens": "348590611e879aea",
+        "hash_cont_tokens": "3176786047dd0d03"
+      },
+      "truncated": 0,
+      "non_truncated": 390,
+      "padded": 1560,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_mathematics|5": {
+      "hashes": {
+        "hash_examples": "fd54f1c10d423c51",
+        "hash_full_prompts": "7dbb722d48b01d1a",
+        "hash_input_tokens": "103169f06d5370e5",
+        "hash_cont_tokens": "c3031614e23aad29"
+      },
+      "truncated": 0,
+      "non_truncated": 270,
+      "padded": 1080,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_microeconomics|5": {
+      "hashes": {
+        "hash_examples": "7037896925aaf42f",
+        "hash_full_prompts": "cf06d07948536fde",
+        "hash_input_tokens": "6a92191182963b7e",
+        "hash_cont_tokens": "24e0442e0df00056"
+      },
+      "truncated": 0,
+      "non_truncated": 238,
+      "padded": 946,
+      "non_padded": 6,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_physics|5": {
+      "hashes": {
+        "hash_examples": "60c3776215167dae",
+        "hash_full_prompts": "e6d5f073ef80880e",
+        "hash_input_tokens": "f014014a636129d5",
+        "hash_cont_tokens": "4c1a9fe0b6b50a5b"
+      },
+      "truncated": 0,
+      "non_truncated": 151,
+      "padded": 604,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_psychology|5": {
+      "hashes": {
+        "hash_examples": "61176bfd5da1298f",
+        "hash_full_prompts": "ee7f4f2064eae0a4",
+        "hash_input_tokens": "84e89354215dabcb",
+        "hash_cont_tokens": "306859773b0e0f45"
+      },
+      "truncated": 0,
+      "non_truncated": 545,
+      "padded": 2180,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_statistics|5": {
+      "hashes": {
+        "hash_examples": "40dfeebd1ea10f76",
+        "hash_full_prompts": "4375b93018e97c76",
+        "hash_input_tokens": "5fc5376b4f7b1314",
+        "hash_cont_tokens": "a2814606dc2a08f6"
+      },
+      "truncated": 0,
+      "non_truncated": 216,
+      "padded": 864,
+      "non_padded": 0,
+      "effective_few_shots": 4.99537037037037,
+      "num_truncated_few_shots": 1
+    },
+    "community|arabic_mmlu:high_school_us_history|5": {
+      "hashes": {
+        "hash_examples": "03daa510ba917f4d",
+        "hash_full_prompts": "44063e13b88958e9",
+        "hash_input_tokens": "732bb8631d2a7f78",
+        "hash_cont_tokens": "61a6c8938cb5c881"
+      },
+      "truncated": 0,
+      "non_truncated": 204,
+      "padded": 816,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:high_school_world_history|5": {
+      "hashes": {
+        "hash_examples": "be075ffd579f43c2",
+        "hash_full_prompts": "746184e8b08a1f37",
+        "hash_input_tokens": "0d80097ad72b267d",
+        "hash_cont_tokens": "0113190619d4daea"
+      },
+      "truncated": 0,
+      "non_truncated": 237,
+      "padded": 948,
+      "non_padded": 0,
+      "effective_few_shots": 4.962025316455696,
+      "num_truncated_few_shots": 3
+    },
+    "community|arabic_mmlu:human_aging|5": {
+      "hashes": {
+        "hash_examples": "caa5b69f640bd1ef",
+        "hash_full_prompts": "ef1e39e2ed4b7062",
+        "hash_input_tokens": "c8b8a915dd29f5df",
+        "hash_cont_tokens": "fb3320591ad5dc5b"
+      },
+      "truncated": 0,
+      "non_truncated": 223,
+      "padded": 888,
+      "non_padded": 4,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:human_sexuality|5": {
+      "hashes": {
+        "hash_examples": "5ed2e38fb25a3767",
+        "hash_full_prompts": "97ed1d98bc4fe65a",
+        "hash_input_tokens": "3d1ed287dd447f2e",
+        "hash_cont_tokens": "d3b9ed5b327b45ba"
+      },
+      "truncated": 0,
+      "non_truncated": 131,
+      "padded": 520,
+      "non_padded": 4,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:international_law|5": {
+      "hashes": {
+        "hash_examples": "4e3e9e28d1b96484",
+        "hash_full_prompts": "10b514961edfc393",
+        "hash_input_tokens": "12f3c92637e0cef4",
+        "hash_cont_tokens": "21ca74d5a7a249d6"
+      },
+      "truncated": 0,
+      "non_truncated": 121,
+      "padded": 484,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:jurisprudence|5": {
+      "hashes": {
+        "hash_examples": "e264b755366310b3",
+        "hash_full_prompts": "2e06fff9ab533915",
+        "hash_input_tokens": "075a0579c757e093",
+        "hash_cont_tokens": "5004cc637bca834c"
+      },
+      "truncated": 0,
+      "non_truncated": 108,
+      "padded": 432,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:logical_fallacies|5": {
+      "hashes": {
+        "hash_examples": "a4ab6965a3e38071",
+        "hash_full_prompts": "23ecda0d323885aa",
+        "hash_input_tokens": "52860cb424182100",
+        "hash_cont_tokens": "e2c842bdbbebf5a8"
+      },
+      "truncated": 0,
+      "non_truncated": 163,
+      "padded": 652,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:machine_learning|5": {
+      "hashes": {
+        "hash_examples": "b92320efa6636b40",
+        "hash_full_prompts": "d176e1708e5d03dd",
+        "hash_input_tokens": "64a54a1a391edfcc",
+        "hash_cont_tokens": "d9b86eac3859d3ff"
+      },
+      "truncated": 0,
+      "non_truncated": 112,
+      "padded": 448,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:management|5": {
+      "hashes": {
+        "hash_examples": "c9ee4872a850fe20",
+        "hash_full_prompts": "2925872de18555d3",
+        "hash_input_tokens": "76c3e60ac3a4af29",
+        "hash_cont_tokens": "d4631f1f07f87968"
+      },
+      "truncated": 0,
+      "non_truncated": 103,
+      "padded": 412,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:marketing|5": {
+      "hashes": {
+        "hash_examples": "0c151b70f6a047e3",
+        "hash_full_prompts": "14844c0e262b85c6",
+        "hash_input_tokens": "8b0bcde44ff79800",
+        "hash_cont_tokens": "0ca189c8111968a8"
+      },
+      "truncated": 0,
+      "non_truncated": 234,
+      "padded": 936,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:medical_genetics|5": {
+      "hashes": {
+        "hash_examples": "513f6cb8fca3a24e",
+        "hash_full_prompts": "7651deeb7bf367df",
+        "hash_input_tokens": "0849bafaff2e74d1",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:miscellaneous|5": {
+      "hashes": {
+        "hash_examples": "259a190d635331db",
+        "hash_full_prompts": "bc4aa9321c563043",
+        "hash_input_tokens": "ff99340488afbd24",
+        "hash_cont_tokens": "75a6a3f4c41771af"
+      },
+      "truncated": 0,
+      "non_truncated": 783,
+      "padded": 3132,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:moral_disputes|5": {
+      "hashes": {
+        "hash_examples": "b85052c48a0b7bc3",
+        "hash_full_prompts": "3bfcc2ad730416a4",
+        "hash_input_tokens": "8ac881675290e581",
+        "hash_cont_tokens": "c5f6ce8c9ea106ca"
+      },
+      "truncated": 0,
+      "non_truncated": 346,
+      "padded": 1384,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:moral_scenarios|5": {
+      "hashes": {
+        "hash_examples": "28d0b069ef00dd00",
+        "hash_full_prompts": "21227b832f92977e",
+        "hash_input_tokens": "555176bac29cfb3a",
+        "hash_cont_tokens": "17d652e95abd0987"
+      },
+      "truncated": 0,
+      "non_truncated": 895,
+      "padded": 3580,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:nutrition|5": {
+      "hashes": {
+        "hash_examples": "00c9bc5f1d305b2f",
+        "hash_full_prompts": "5f7a9b4dabc0305e",
+        "hash_input_tokens": "b161387b4212d008",
+        "hash_cont_tokens": "9de63e56272b391d"
+      },
+      "truncated": 0,
+      "non_truncated": 306,
+      "padded": 1222,
+      "non_padded": 2,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:philosophy|5": {
+      "hashes": {
+        "hash_examples": "a458c08454a3fd5f",
+        "hash_full_prompts": "02e6601b66c6ffac",
+        "hash_input_tokens": "d27b9f704058c505",
+        "hash_cont_tokens": "7dbd1d0d62726659"
+      },
+      "truncated": 0,
+      "non_truncated": 311,
+      "padded": 1244,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:prehistory|5": {
+      "hashes": {
+        "hash_examples": "d6a0ecbdbb670e9c",
+        "hash_full_prompts": "5093e3964d99c472",
+        "hash_input_tokens": "db976154273ed078",
+        "hash_cont_tokens": "04673f858f29f219"
+      },
+      "truncated": 0,
+      "non_truncated": 324,
+      "padded": 1296,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:professional_accounting|5": {
+      "hashes": {
+        "hash_examples": "b4a95fe480b6540e",
+        "hash_full_prompts": "ca667d2f4db1c8ee",
+        "hash_input_tokens": "f0215b23b9549abf",
+        "hash_cont_tokens": "f0580dc49638304e"
+      },
+      "truncated": 0,
+      "non_truncated": 282,
+      "padded": 1128,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:professional_law|5": {
+      "hashes": {
+        "hash_examples": "c2be9651cdbdde3b",
+        "hash_full_prompts": "4f56cdb1ed351fd3",
+        "hash_input_tokens": "f0408b92451acfd1",
+        "hash_cont_tokens": "132d914dd78691f5"
+      },
+      "truncated": 0,
+      "non_truncated": 1534,
+      "padded": 6116,
+      "non_padded": 20,
+      "effective_few_shots": 3.4237288135593222,
+      "num_truncated_few_shots": 1534
+    },
+    "community|arabic_mmlu:professional_medicine|5": {
+      "hashes": {
+        "hash_examples": "26ce92416288f273",
+        "hash_full_prompts": "97ab989d8507b2e3",
+        "hash_input_tokens": "07085f8d5c531541",
+        "hash_cont_tokens": "ee3755afde5c5c4a"
+      },
+      "truncated": 0,
+      "non_truncated": 272,
+      "padded": 1088,
+      "non_padded": 0,
+      "effective_few_shots": 4.988970588235294,
+      "num_truncated_few_shots": 3
+    },
+    "community|arabic_mmlu:professional_psychology|5": {
+      "hashes": {
+        "hash_examples": "71ea5f182ea9a641",
+        "hash_full_prompts": "571222520787adc2",
+        "hash_input_tokens": "63385eccd4cb30d3",
+        "hash_cont_tokens": "ae988af6d0261bdb"
+      },
+      "truncated": 0,
+      "non_truncated": 612,
+      "padded": 2440,
+      "non_padded": 8,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:public_relations|5": {
+      "hashes": {
+        "hash_examples": "125adc21f91f8d77",
+        "hash_full_prompts": "917adaee95dc1ca4",
+        "hash_input_tokens": "cd439d5a19c136e0",
+        "hash_cont_tokens": "91c08f06fde9994b"
+      },
+      "truncated": 0,
+      "non_truncated": 110,
+      "padded": 440,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:security_studies|5": {
+      "hashes": {
+        "hash_examples": "3c18b216c099fb26",
+        "hash_full_prompts": "ceffe04eccc4da84",
+        "hash_input_tokens": "2dfa5773c4485faa",
+        "hash_cont_tokens": "fd9a1fd289038d30"
+      },
+      "truncated": 0,
+      "non_truncated": 245,
+      "padded": 980,
+      "non_padded": 0,
+      "effective_few_shots": 2.816326530612245,
+      "num_truncated_few_shots": 245
+    },
+    "community|arabic_mmlu:sociology|5": {
+      "hashes": {
+        "hash_examples": "3f2a9634cef7417d",
+        "hash_full_prompts": "b3fccb5fe12ce4f8",
+        "hash_input_tokens": "db64e300a76b6653",
+        "hash_cont_tokens": "6796f404c6184ead"
+      },
+      "truncated": 0,
+      "non_truncated": 201,
+      "padded": 792,
+      "non_padded": 12,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:us_foreign_policy|5": {
+      "hashes": {
+        "hash_examples": "22249da54056475e",
+        "hash_full_prompts": "d1ed3520cfcb7c44",
+        "hash_input_tokens": "27fe65038111ca03",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:virology|5": {
+      "hashes": {
+        "hash_examples": "9d194b9471dc624e",
+        "hash_full_prompts": "780f7b0e04e47c82",
+        "hash_input_tokens": "c8e60464bf41d111",
+        "hash_cont_tokens": "d7ab38bcb336cf25"
+      },
+      "truncated": 0,
+      "non_truncated": 166,
+      "padded": 652,
+      "non_padded": 12,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:world_religions|5": {
+      "hashes": {
+        "hash_examples": "229e5fe50082b064",
+        "hash_full_prompts": "0ed2b106f1fca3f3",
+        "hash_input_tokens": "d254a3fe05c31959",
+        "hash_cont_tokens": "07fb18a50c170f8e"
+      },
+      "truncated": 0,
+      "non_truncated": 171,
+      "padded": 684,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "hashes": {
+        "hash_examples": "865426a22c787481",
+        "hash_full_prompts": "865426a22c787481",
+        "hash_input_tokens": "3c80e18e040c4119",
+        "hash_cont_tokens": "312954442a9cc892"
+      },
+      "truncated": 0,
+      "non_truncated": 1511,
+      "padded": 3022,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "b37f66bfb990f6ea",
+      "hash_full_prompts": "2e8f1f2af847d553",
+      "hash_input_tokens": "9dcb69b8c096477c",
+      "hash_cont_tokens": "1650714539aa8cd0"
+    },
+    "truncated": 0,
+    "non_truncated": 15553,
+    "padded": 59122,
+    "non_padded": 68,
+    "num_truncated_few_shots": 1822
+  }
+}

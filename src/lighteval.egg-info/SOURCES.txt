@@ -1,7 +1,4 @@
-LICENSE
-MANIFEST.in
 README.md
-pyproject.toml
 setup.py
 src/lighteval/__init__.py
 src/lighteval/data.py
@@ -14,8 +11,6 @@ src/lighteval/utils_parallelism.py
 src/lighteval.egg-info/PKG-INFO
 src/lighteval.egg-info/SOURCES.txt
 src/lighteval.egg-info/dependency_links.txt
-src/lighteval.egg-info/entry_points.txt
-src/lighteval.egg-info/requires.txt
 src/lighteval.egg-info/top_level.txt
 src/lighteval/commands/lighteval_cli.py
 src/lighteval/logging/evaluation_tracker.py

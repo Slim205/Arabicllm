@@ -1,0 +1,300 @@
+{
+  "config_general": {
+    "lighteval_sha": "4d8c620733802aba964d87aafb12739c8f72bc7d",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 64,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 26678.956371545,
+    "end_time": 26750.618255224,
+    "total_evaluation_time_secondes": "71.66188367900031",
+    "model_name": "EleutherAI/pythia-70m",
+    "model_sha": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "model_dtype": "torch.float16",
+    "model_size": "138.83 MB",
+    "config": null
+  },
+  "results": {
+    "community|arabic_mmlu:abstract_algebra|5": {
+      "acc_norm": 0.22,
+      "acc_norm_stderr": 0.04163331998932268
+    },
+    "community|arabic_mmlu:anatomy|5": {
+      "acc_norm": 0.1925925925925926,
+      "acc_norm_stderr": 0.03406542058502655
+    },
+    "community|arabic_mmlu:astronomy|5": {
+      "acc_norm": 0.17763157894736842,
+      "acc_norm_stderr": 0.031103182383123398
+    },
+    "community|arabic_mmlu:business_ethics|5": {
+      "acc_norm": 0.31,
+      "acc_norm_stderr": 0.04648231987117316
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "acc": 0.46591661151555264,
+      "acc_stderr": 0.012837195610619434
+    },
+    "community|arabic_mmlu:_average|5": {
+      "acc_norm": 0.22505604288499026,
+      "acc_norm_stderr": 0.038321060707161445
+    },
+    "all": {
+      "acc_norm": 0.22505604288499026,
+      "acc_norm_stderr": 0.038321060707161445,
+      "acc": 0.46591661151555264,
+      "acc_stderr": 0.012837195610619434
+    }
+  },
+  "versions": {
+    "community|arabic_mmlu:abstract_algebra|5": 0,
+    "community|arabic_mmlu:anatomy|5": 0,
+    "community|arabic_mmlu:astronomy|5": 0,
+    "community|arabic_mmlu:business_ethics|5": 0,
+    "lighteval|xstory_cloze:ar|0": 0
+  },
+  "config_tasks": {
+    "community|arabic_mmlu:abstract_algebra": {
+      "name": "arabic_mmlu:abstract_algebra",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "abstract_algebra",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:anatomy": {
+      "name": "arabic_mmlu:anatomy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "anatomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 135,
+      "effective_num_docs": 135,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:astronomy": {
+      "name": "arabic_mmlu:astronomy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "astronomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 152,
+      "effective_num_docs": 152,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:business_ethics": {
+      "name": "arabic_mmlu:business_ethics",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "business_ethics",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "lighteval|xstory_cloze:ar": {
+      "name": "xstory_cloze:ar",
+      "prompt_function": "storycloze",
+      "hf_repo": "juletxara/xstory_cloze",
+      "hf_subset": "ar",
+      "metric": [
+        "loglikelihood_acc"
+      ],
+      "hf_avail_splits": [
+        "training",
+        "eval"
+      ],
+      "evaluation_splits": [
+        "eval"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "lighteval"
+      ],
+      "original_num_docs": 1511,
+      "effective_num_docs": 1511,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|arabic_mmlu:abstract_algebra|5": {
+      "hashes": {
+        "hash_examples": "f2ddca8f45c0a511",
+        "hash_full_prompts": "7dae76e9c966c8ee",
+        "hash_input_tokens": "f37c696a85d4e819",
+        "hash_cont_tokens": "1b6324c6020d9dae"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 399,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:anatomy|5": {
+      "hashes": {
+        "hash_examples": "dfdbc1b83107668d",
+        "hash_full_prompts": "96b301d0d23a23b2",
+        "hash_input_tokens": "3a045e8586b62e8c",
+        "hash_cont_tokens": "6a127e3751ad29f6"
+      },
+      "truncated": 0,
+      "non_truncated": 135,
+      "padded": 532,
+      "non_padded": 8,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:astronomy|5": {
+      "hashes": {
+        "hash_examples": "9736a606002a848e",
+        "hash_full_prompts": "18aab550cbf246fb",
+        "hash_input_tokens": "96bcef8482b4670c",
+        "hash_cont_tokens": "2f180704eb172de3"
+      },
+      "truncated": 0,
+      "non_truncated": 152,
+      "padded": 604,
+      "non_padded": 4,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:business_ethics|5": {
+      "hashes": {
+        "hash_examples": "735e452fbb6dc63d",
+        "hash_full_prompts": "0b6d539453c08221",
+        "hash_input_tokens": "403a2a340a1c1402",
+        "hash_cont_tokens": "d77db207185fabb6"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "hashes": {
+        "hash_examples": "865426a22c787481",
+        "hash_full_prompts": "865426a22c787481",
+        "hash_input_tokens": "ccd2ad3456fff342",
+        "hash_cont_tokens": "4ec9ccfe00a897f4"
+      },
+      "truncated": 0,
+      "non_truncated": 1511,
+      "padded": 2977,
+      "non_padded": 45,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "d8dcc8f011486c55",
+      "hash_full_prompts": "7dfc03360e784ff4",
+      "hash_input_tokens": "8a811fcb3956d433",
+      "hash_cont_tokens": "f8dcb33bb02976ae"
+    },
+    "truncated": 0,
+    "non_truncated": 1998,
+    "padded": 4912,
+    "non_padded": 58,
+    "num_truncated_few_shots": 0
+  }
+}

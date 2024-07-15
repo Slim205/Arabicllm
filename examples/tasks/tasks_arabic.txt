@@ -1,0 +1,10 @@
+community|race_ar|5|1
+community|arc_challenge_okapi_ar|5|1
+community|mmlu_okapi_ar|5|1
+community|openbook_qa_ext_ar|5|1
+community|boolq_ar|5|1
+community|copa_ext_ar|5|1
+community|hellaswag_okapi_ar|5|1
+community|toxigen_ar|5|1
+community|sciq_ar|5|1
+community|arabic_exams|5|1

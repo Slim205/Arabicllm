@@ -1,0 +1,2946 @@
+{
+  "config_general": {
+    "lighteval_sha": "4d8c620733802aba964d87aafb12739c8f72bc7d",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 2,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 378719.333966131,
+    "end_time": 379409.574822221,
+    "total_evaluation_time_secondes": "690.2408560900367",
+    "model_name": "google/gemma-2-9b-it",
+    "model_sha": "1937c70277fcc5f7fb0fc772fc5bc69378996e71",
+    "model_dtype": "torch.bfloat16",
+    "model_size": "17.21 GB",
+    "config": null
+  },
+  "results": {
+    "community|acva:Algeria|5": {
+      "acc_norm": 0.8769230769230769,
+      "acc_norm_stderr": 0.023586755203833503
+    },
+    "community|acva:Ancient_Egypt|5": {
+      "acc_norm": 0.8793650793650793,
+      "acc_norm_stderr": 0.0183804569918797
+    },
+    "community|acva:Arab_Empire|5": {
+      "acc_norm": 0.6754716981132075,
+      "acc_norm_stderr": 0.028815615713432115
+    },
+    "community|acva:Arabic_Architecture|5": {
+      "acc_norm": 0.7589743589743589,
+      "acc_norm_stderr": 0.030707489381124206
+    },
+    "community|acva:Arabic_Art|5": {
+      "acc_norm": 0.7076923076923077,
+      "acc_norm_stderr": 0.032654383937495104
+    },
+    "community|acva:Arabic_Astronomy|5": {
+      "acc_norm": 0.48717948717948717,
+      "acc_norm_stderr": 0.03588610523192216
+    },
+    "community|acva:Arabic_Calligraphy|5": {
+      "acc_norm": 0.7529411764705882,
+      "acc_norm_stderr": 0.027062246797977103
+    },
+    "community|acva:Arabic_Ceremony|5": {
+      "acc_norm": 0.8108108108108109,
+      "acc_norm_stderr": 0.0288734720923751
+    },
+    "community|acva:Arabic_Clothing|5": {
+      "acc_norm": 0.5743589743589743,
+      "acc_norm_stderr": 0.03549871080367708
+    },
+    "community|acva:Arabic_Culture|5": {
+      "acc_norm": 0.9179487179487179,
+      "acc_norm_stderr": 0.0197038471785116
+    },
+    "community|acva:Arabic_Food|5": {
+      "acc_norm": 0.7128205128205128,
+      "acc_norm_stderr": 0.03248373338539886
+    },
+    "community|acva:Arabic_Funeral|5": {
+      "acc_norm": 0.9263157894736842,
+      "acc_norm_stderr": 0.026946528542342738
+    },
+    "community|acva:Arabic_Geography|5": {
+      "acc_norm": 0.7793103448275862,
+      "acc_norm_stderr": 0.03455930201924811
+    },
+    "community|acva:Arabic_History|5": {
+      "acc_norm": 0.7333333333333333,
+      "acc_norm_stderr": 0.03174930436412671
+    },
+    "community|acva:Arabic_Language_Origin|5": {
+      "acc_norm": 0.7578947368421053,
+      "acc_norm_stderr": 0.04418172153936914
+    },
+    "community|acva:Arabic_Literature|5": {
+      "acc_norm": 0.8551724137931035,
+      "acc_norm_stderr": 0.029327243269363396
+    },
+    "community|acva:Arabic_Math|5": {
+      "acc_norm": 0.7846153846153846,
+      "acc_norm_stderr": 0.02951446289186094
+    },
+    "community|acva:Arabic_Medicine|5": {
+      "acc_norm": 0.8758620689655172,
+      "acc_norm_stderr": 0.027478236983636602
+    },
+    "community|acva:Arabic_Music|5": {
+      "acc_norm": 0.8920863309352518,
+      "acc_norm_stderr": 0.026412051088626282
+    },
+    "community|acva:Arabic_Ornament|5": {
+      "acc_norm": 0.8666666666666667,
+      "acc_norm_stderr": 0.024405884404899894
+    },
+    "community|acva:Arabic_Philosophy|5": {
+      "acc_norm": 0.7655172413793103,
+      "acc_norm_stderr": 0.035306258743465914
+    },
+    "community|acva:Arabic_Physics_and_Chemistry|5": {
+      "acc_norm": 0.8051282051282052,
+      "acc_norm_stderr": 0.028438464807264478
+    },
+    "community|acva:Arabic_Wedding|5": {
+      "acc_norm": 0.8615384615384616,
+      "acc_norm_stderr": 0.024797108746953934
+    },
+    "community|acva:Bahrain|5": {
+      "acc_norm": 0.8666666666666667,
+      "acc_norm_stderr": 0.051247074319053836
+    },
+    "community|acva:Comoros|5": {
+      "acc_norm": 0.8666666666666667,
+      "acc_norm_stderr": 0.051247074319053836
+    },
+    "community|acva:Egypt_modern|5": {
+      "acc_norm": 0.9473684210526315,
+      "acc_norm_stderr": 0.02303131444703598
+    },
+    "community|acva:InfluenceFromAncientEgypt|5": {
+      "acc_norm": 0.9025641025641026,
+      "acc_norm_stderr": 0.021291078346298977
+    },
+    "community|acva:InfluenceFromByzantium|5": {
+      "acc_norm": 0.8896551724137931,
+      "acc_norm_stderr": 0.02610992342896681
+    },
+    "community|acva:InfluenceFromChina|5": {
+      "acc_norm": 0.6717948717948717,
+      "acc_norm_stderr": 0.03371243782413707
+    },
+    "community|acva:InfluenceFromGreece|5": {
+      "acc_norm": 0.7948717948717948,
+      "acc_norm_stderr": 0.028990811252138905
+    },
+    "community|acva:InfluenceFromIslam|5": {
+      "acc_norm": 0.896551724137931,
+      "acc_norm_stderr": 0.025378623179103003
+    },
+    "community|acva:InfluenceFromPersia|5": {
+      "acc_norm": 0.9714285714285714,
+      "acc_norm_stderr": 0.012629809210528324
+    },
+    "community|acva:InfluenceFromRome|5": {
+      "acc_norm": 0.8307692307692308,
+      "acc_norm_stderr": 0.02692024455476408
+    },
+    "community|acva:Iraq|5": {
+      "acc_norm": 0.8588235294117647,
+      "acc_norm_stderr": 0.03799211615279769
+    },
+    "community|acva:Islam_Education|5": {
+      "acc_norm": 0.8,
+      "acc_norm_stderr": 0.028718326344709482
+    },
+    "community|acva:Islam_branches_and_schools|5": {
+      "acc_norm": 0.8685714285714285,
+      "acc_norm_stderr": 0.025613742499530957
+    },
+    "community|acva:Islamic_law_system|5": {
+      "acc_norm": 0.8666666666666667,
+      "acc_norm_stderr": 0.024405884404899898
+    },
+    "community|acva:Jordan|5": {
+      "acc_norm": 0.7555555555555555,
+      "acc_norm_stderr": 0.06478835438716998
+    },
+    "community|acva:Kuwait|5": {
+      "acc_norm": 0.8888888888888888,
+      "acc_norm_stderr": 0.04737793696791344
+    },
+    "community|acva:Lebanon|5": {
+      "acc_norm": 0.9111111111111111,
+      "acc_norm_stderr": 0.04290254662948545
+    },
+    "community|acva:Libya|5": {
+      "acc_norm": 0.9333333333333333,
+      "acc_norm_stderr": 0.03760507165451774
+    },
+    "community|acva:Mauritania|5": {
+      "acc_norm": 0.8888888888888888,
+      "acc_norm_stderr": 0.04737793696791344
+    },
+    "community|acva:Mesopotamia_civilization|5": {
+      "acc_norm": 0.7935483870967742,
+      "acc_norm_stderr": 0.03261635957463419
+    },
+    "community|acva:Morocco|5": {
+      "acc_norm": 0.8444444444444444,
+      "acc_norm_stderr": 0.05463890236888295
+    },
+    "community|acva:Oman|5": {
+      "acc_norm": 0.8444444444444444,
+      "acc_norm_stderr": 0.05463890236888291
+    },
+    "community|acva:Palestine|5": {
+      "acc_norm": 0.9058823529411765,
+      "acc_norm_stderr": 0.03185897413582727
+    },
+    "community|acva:Qatar|5": {
+      "acc_norm": 0.8666666666666667,
+      "acc_norm_stderr": 0.05124707431905384
+    },
+    "community|acva:Saudi_Arabia|5": {
+      "acc_norm": 0.8974358974358975,
+      "acc_norm_stderr": 0.021782039729793992
+    },
+    "community|acva:Somalia|5": {
+      "acc_norm": 0.8,
+      "acc_norm_stderr": 0.06030226891555273
+    },
+    "community|acva:Sudan|5": {
+      "acc_norm": 0.9111111111111111,
+      "acc_norm_stderr": 0.04290254662948542
+    },
+    "community|acva:Syria|5": {
+      "acc_norm": 0.8888888888888888,
+      "acc_norm_stderr": 0.04737793696791344
+    },
+    "community|acva:Tunisia|5": {
+      "acc_norm": 0.6888888888888889,
+      "acc_norm_stderr": 0.06979205927323111
+    },
+    "community|acva:United_Arab_Emirates|5": {
+      "acc_norm": 0.8588235294117647,
+      "acc_norm_stderr": 0.03799211615279769
+    },
+    "community|acva:Yemen|5": {
+      "acc_norm": 0.9,
+      "acc_norm_stderr": 0.09999999999999999
+    },
+    "community|acva:communication|5": {
+      "acc_norm": 0.8186813186813187,
+      "acc_norm_stderr": 0.020222060419577633
+    },
+    "community|acva:computer_and_phone|5": {
+      "acc_norm": 0.7457627118644068,
+      "acc_norm_stderr": 0.025394887364894685
+    },
+    "community|acva:daily_life|5": {
+      "acc_norm": 0.7893175074183977,
+      "acc_norm_stderr": 0.022246948687324422
+    },
+    "community|acva:entertainment|5": {
+      "acc_norm": 0.8440677966101695,
+      "acc_norm_stderr": 0.021158404140390788
+    },
+    "community|acva:_average|5": {
+      "acc_norm": 0.8252770301526546,
+      "acc_norm_stderr": 0.03497036503546632
+    },
+    "all": {
+      "acc_norm": 0.8252770301526546,
+      "acc_norm_stderr": 0.03497036503546632
+    }
+  },
+  "versions": {
+    "community|acva:Algeria|5": 0,
+    "community|acva:Ancient_Egypt|5": 0,
+    "community|acva:Arab_Empire|5": 0,
+    "community|acva:Arabic_Architecture|5": 0,
+    "community|acva:Arabic_Art|5": 0,
+    "community|acva:Arabic_Astronomy|5": 0,
+    "community|acva:Arabic_Calligraphy|5": 0,
+    "community|acva:Arabic_Ceremony|5": 0,
+    "community|acva:Arabic_Clothing|5": 0,
+    "community|acva:Arabic_Culture|5": 0,
+    "community|acva:Arabic_Food|5": 0,
+    "community|acva:Arabic_Funeral|5": 0,
+    "community|acva:Arabic_Geography|5": 0,
+    "community|acva:Arabic_History|5": 0,
+    "community|acva:Arabic_Language_Origin|5": 0,
+    "community|acva:Arabic_Literature|5": 0,
+    "community|acva:Arabic_Math|5": 0,
+    "community|acva:Arabic_Medicine|5": 0,
+    "community|acva:Arabic_Music|5": 0,
+    "community|acva:Arabic_Ornament|5": 0,
+    "community|acva:Arabic_Philosophy|5": 0,
+    "community|acva:Arabic_Physics_and_Chemistry|5": 0,
+    "community|acva:Arabic_Wedding|5": 0,
+    "community|acva:Bahrain|5": 0,
+    "community|acva:Comoros|5": 0,
+    "community|acva:Egypt_modern|5": 0,
+    "community|acva:InfluenceFromAncientEgypt|5": 0,
+    "community|acva:InfluenceFromByzantium|5": 0,
+    "community|acva:InfluenceFromChina|5": 0,
+    "community|acva:InfluenceFromGreece|5": 0,
+    "community|acva:InfluenceFromIslam|5": 0,
+    "community|acva:InfluenceFromPersia|5": 0,
+    "community|acva:InfluenceFromRome|5": 0,
+    "community|acva:Iraq|5": 0,
+    "community|acva:Islam_Education|5": 0,
+    "community|acva:Islam_branches_and_schools|5": 0,
+    "community|acva:Islamic_law_system|5": 0,
+    "community|acva:Jordan|5": 0,
+    "community|acva:Kuwait|5": 0,
+    "community|acva:Lebanon|5": 0,
+    "community|acva:Libya|5": 0,
+    "community|acva:Mauritania|5": 0,
+    "community|acva:Mesopotamia_civilization|5": 0,
+    "community|acva:Morocco|5": 0,
+    "community|acva:Oman|5": 0,
+    "community|acva:Palestine|5": 0,
+    "community|acva:Qatar|5": 0,
+    "community|acva:Saudi_Arabia|5": 0,
+    "community|acva:Somalia|5": 0,
+    "community|acva:Sudan|5": 0,
+    "community|acva:Syria|5": 0,
+    "community|acva:Tunisia|5": 0,
+    "community|acva:United_Arab_Emirates|5": 0,
+    "community|acva:Yemen|5": 0,
+    "community|acva:communication|5": 0,
+    "community|acva:computer_and_phone|5": 0,
+    "community|acva:daily_life|5": 0,
+    "community|acva:entertainment|5": 0
+  },
+  "config_tasks": {
+    "community|acva:Algeria": {
+      "name": "acva:Algeria",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Algeria",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Ancient_Egypt": {
+      "name": "acva:Ancient_Egypt",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Ancient_Egypt",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 315,
+      "effective_num_docs": 315,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arab_Empire": {
+      "name": "acva:Arab_Empire",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arab_Empire",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 265,
+      "effective_num_docs": 265,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Architecture": {
+      "name": "acva:Arabic_Architecture",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Architecture",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Art": {
+      "name": "acva:Arabic_Art",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Art",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Astronomy": {
+      "name": "acva:Arabic_Astronomy",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Astronomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Calligraphy": {
+      "name": "acva:Arabic_Calligraphy",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Calligraphy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 255,
+      "effective_num_docs": 255,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Ceremony": {
+      "name": "acva:Arabic_Ceremony",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Ceremony",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 185,
+      "effective_num_docs": 185,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Clothing": {
+      "name": "acva:Arabic_Clothing",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Clothing",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Culture": {
+      "name": "acva:Arabic_Culture",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Culture",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Food": {
+      "name": "acva:Arabic_Food",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Food",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Funeral": {
+      "name": "acva:Arabic_Funeral",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Funeral",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 95,
+      "effective_num_docs": 95,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Geography": {
+      "name": "acva:Arabic_Geography",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Geography",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_History": {
+      "name": "acva:Arabic_History",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_History",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Language_Origin": {
+      "name": "acva:Arabic_Language_Origin",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Language_Origin",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 95,
+      "effective_num_docs": 95,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Literature": {
+      "name": "acva:Arabic_Literature",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Literature",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Math": {
+      "name": "acva:Arabic_Math",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Math",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Medicine": {
+      "name": "acva:Arabic_Medicine",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Medicine",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Music": {
+      "name": "acva:Arabic_Music",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Music",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 139,
+      "effective_num_docs": 139,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Ornament": {
+      "name": "acva:Arabic_Ornament",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Ornament",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Philosophy": {
+      "name": "acva:Arabic_Philosophy",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Philosophy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Physics_and_Chemistry": {
+      "name": "acva:Arabic_Physics_and_Chemistry",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Physics_and_Chemistry",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Arabic_Wedding": {
+      "name": "acva:Arabic_Wedding",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Arabic_Wedding",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Bahrain": {
+      "name": "acva:Bahrain",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Bahrain",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Comoros": {
+      "name": "acva:Comoros",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Comoros",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Egypt_modern": {
+      "name": "acva:Egypt_modern",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Egypt_modern",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 95,
+      "effective_num_docs": 95,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromAncientEgypt": {
+      "name": "acva:InfluenceFromAncientEgypt",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromAncientEgypt",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromByzantium": {
+      "name": "acva:InfluenceFromByzantium",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromByzantium",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromChina": {
+      "name": "acva:InfluenceFromChina",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromChina",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromGreece": {
+      "name": "acva:InfluenceFromGreece",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromGreece",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromIslam": {
+      "name": "acva:InfluenceFromIslam",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromIslam",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 145,
+      "effective_num_docs": 145,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromPersia": {
+      "name": "acva:InfluenceFromPersia",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromPersia",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 175,
+      "effective_num_docs": 175,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:InfluenceFromRome": {
+      "name": "acva:InfluenceFromRome",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "InfluenceFromRome",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Iraq": {
+      "name": "acva:Iraq",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Iraq",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 85,
+      "effective_num_docs": 85,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Islam_Education": {
+      "name": "acva:Islam_Education",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Islam_Education",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Islam_branches_and_schools": {
+      "name": "acva:Islam_branches_and_schools",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Islam_branches_and_schools",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 175,
+      "effective_num_docs": 175,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Islamic_law_system": {
+      "name": "acva:Islamic_law_system",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Islamic_law_system",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Jordan": {
+      "name": "acva:Jordan",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Jordan",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Kuwait": {
+      "name": "acva:Kuwait",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Kuwait",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Lebanon": {
+      "name": "acva:Lebanon",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Lebanon",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Libya": {
+      "name": "acva:Libya",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Libya",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Mauritania": {
+      "name": "acva:Mauritania",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Mauritania",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Mesopotamia_civilization": {
+      "name": "acva:Mesopotamia_civilization",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Mesopotamia_civilization",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 155,
+      "effective_num_docs": 155,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Morocco": {
+      "name": "acva:Morocco",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Morocco",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Oman": {
+      "name": "acva:Oman",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Oman",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Palestine": {
+      "name": "acva:Palestine",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Palestine",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 85,
+      "effective_num_docs": 85,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Qatar": {
+      "name": "acva:Qatar",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Qatar",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Saudi_Arabia": {
+      "name": "acva:Saudi_Arabia",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Saudi_Arabia",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 195,
+      "effective_num_docs": 195,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Somalia": {
+      "name": "acva:Somalia",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Somalia",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Sudan": {
+      "name": "acva:Sudan",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Sudan",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Syria": {
+      "name": "acva:Syria",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Syria",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Tunisia": {
+      "name": "acva:Tunisia",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Tunisia",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 45,
+      "effective_num_docs": 45,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:United_Arab_Emirates": {
+      "name": "acva:United_Arab_Emirates",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "United_Arab_Emirates",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 85,
+      "effective_num_docs": 85,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:Yemen": {
+      "name": "acva:Yemen",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "Yemen",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 10,
+      "effective_num_docs": 10,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:communication": {
+      "name": "acva:communication",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "communication",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 364,
+      "effective_num_docs": 364,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:computer_and_phone": {
+      "name": "acva:computer_and_phone",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "computer_and_phone",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 295,
+      "effective_num_docs": 295,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:daily_life": {
+      "name": "acva:daily_life",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "daily_life",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 337,
+      "effective_num_docs": 337,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|acva:entertainment": {
+      "name": "acva:entertainment",
+      "prompt_function": "acva",
+      "hf_repo": "OALL/ACVA",
+      "hf_subset": "entertainment",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 295,
+      "effective_num_docs": 295,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|acva:Algeria|5": {
+      "hashes": {
+        "hash_examples": "da5a3003cd46f6f9",
+        "hash_full_prompts": "c29c94a4778b91af",
+        "hash_input_tokens": "520df507703fa86d",
+        "hash_cont_tokens": "36a92ff952c013ae"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Ancient_Egypt|5": {
+      "hashes": {
+        "hash_examples": "52d6f767fede195b",
+        "hash_full_prompts": "180fa0424d9930c1",
+        "hash_input_tokens": "3d10827a05fd3b60",
+        "hash_cont_tokens": "4dd84c26bbd31339"
+      },
+      "truncated": 0,
+      "non_truncated": 315,
+      "padded": 630,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arab_Empire|5": {
+      "hashes": {
+        "hash_examples": "8dacff6a79804a75",
+        "hash_full_prompts": "887aee46e82b83be",
+        "hash_input_tokens": "3c6aa49255680793",
+        "hash_cont_tokens": "16c5986712f07290"
+      },
+      "truncated": 0,
+      "non_truncated": 265,
+      "padded": 530,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Architecture|5": {
+      "hashes": {
+        "hash_examples": "df286cd862d9f6bb",
+        "hash_full_prompts": "81711e01be90b5e6",
+        "hash_input_tokens": "000cbd96affaeb0b",
+        "hash_cont_tokens": "a03024ba6340536a"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Art|5": {
+      "hashes": {
+        "hash_examples": "112883d764118a49",
+        "hash_full_prompts": "5edc75896c16741a",
+        "hash_input_tokens": "a6fcb357cea91e1a",
+        "hash_cont_tokens": "a03024ba6340536a"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Astronomy|5": {
+      "hashes": {
+        "hash_examples": "20dcdf2454bf8671",
+        "hash_full_prompts": "a256f8ebf1979ebe",
+        "hash_input_tokens": "0a76b217841ebbc1",
+        "hash_cont_tokens": "831b262f27458dd8"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Calligraphy|5": {
+      "hashes": {
+        "hash_examples": "3a9f9d1ebe868a15",
+        "hash_full_prompts": "6fa5839f835a8d91",
+        "hash_input_tokens": "cf2e6f9cad1d5a3c",
+        "hash_cont_tokens": "b7c67826433a4ce2"
+      },
+      "truncated": 0,
+      "non_truncated": 255,
+      "padded": 510,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Ceremony|5": {
+      "hashes": {
+        "hash_examples": "c927630f8d2f44da",
+        "hash_full_prompts": "5c855368b76ce9a2",
+        "hash_input_tokens": "d532a788c275708b",
+        "hash_cont_tokens": "9e64410b8672cf3c"
+      },
+      "truncated": 0,
+      "non_truncated": 185,
+      "padded": 339,
+      "non_padded": 31,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Clothing|5": {
+      "hashes": {
+        "hash_examples": "6ad0740c2ac6ac92",
+        "hash_full_prompts": "07a8647e8f9c8d1b",
+        "hash_input_tokens": "9962d413bf765642",
+        "hash_cont_tokens": "db136fbbba66acf3"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 345,
+      "non_padded": 45,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Culture|5": {
+      "hashes": {
+        "hash_examples": "2177bd857ad872ae",
+        "hash_full_prompts": "c1cf28608e1fb425",
+        "hash_input_tokens": "e43ca7c41cff9d9c",
+        "hash_cont_tokens": "9a692c7ae94cf462"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 379,
+      "non_padded": 11,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Food|5": {
+      "hashes": {
+        "hash_examples": "a6ada65b71d7c9c5",
+        "hash_full_prompts": "86ba76526b296be2",
+        "hash_input_tokens": "8f4d07325074243d",
+        "hash_cont_tokens": "59780a91ee917dc8"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Funeral|5": {
+      "hashes": {
+        "hash_examples": "fcee39dc29eaae91",
+        "hash_full_prompts": "cb5c8f47c7040564",
+        "hash_input_tokens": "1664869794cb0a03",
+        "hash_cont_tokens": "60ccaa74653ebe0f"
+      },
+      "truncated": 0,
+      "non_truncated": 95,
+      "padded": 190,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Geography|5": {
+      "hashes": {
+        "hash_examples": "d36eda7c89231c02",
+        "hash_full_prompts": "28de532ce8af96b4",
+        "hash_input_tokens": "eae8c58ee1d62c04",
+        "hash_cont_tokens": "6524718b18404765"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 290,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_History|5": {
+      "hashes": {
+        "hash_examples": "6354ac0d6db6a5fc",
+        "hash_full_prompts": "6d6bed6651718cbd",
+        "hash_input_tokens": "99deba5264d57678",
+        "hash_cont_tokens": "0b9afff85957bc9a"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Language_Origin|5": {
+      "hashes": {
+        "hash_examples": "ddc967c8aca34402",
+        "hash_full_prompts": "43331d29ba5ee173",
+        "hash_input_tokens": "c9a56b31313d7d91",
+        "hash_cont_tokens": "60ccaa74653ebe0f"
+      },
+      "truncated": 0,
+      "non_truncated": 95,
+      "padded": 190,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Literature|5": {
+      "hashes": {
+        "hash_examples": "4305379fd46be5d8",
+        "hash_full_prompts": "bfa6c0c0b2cc3bf3",
+        "hash_input_tokens": "4c5759756244aa75",
+        "hash_cont_tokens": "bc0f85a96264d21c"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 264,
+      "non_padded": 26,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Math|5": {
+      "hashes": {
+        "hash_examples": "dec621144f4d28be",
+        "hash_full_prompts": "fc31377795d0278a",
+        "hash_input_tokens": "cb2cf437b788ed05",
+        "hash_cont_tokens": "db136fbbba66acf3"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Medicine|5": {
+      "hashes": {
+        "hash_examples": "2b344cdae9495ff2",
+        "hash_full_prompts": "dd28c6072634e8b4",
+        "hash_input_tokens": "12f04b66402a3e92",
+        "hash_cont_tokens": "adbf3351cfece7a2"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 252,
+      "non_padded": 38,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Music|5": {
+      "hashes": {
+        "hash_examples": "0c54624d881944ce",
+        "hash_full_prompts": "15efa221a080fba6",
+        "hash_input_tokens": "fa6e2c61dcfb0c98",
+        "hash_cont_tokens": "67ba76f40ed09519"
+      },
+      "truncated": 0,
+      "non_truncated": 139,
+      "padded": 277,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Ornament|5": {
+      "hashes": {
+        "hash_examples": "251a4a84289d8bc1",
+        "hash_full_prompts": "0726b58b307c920e",
+        "hash_input_tokens": "605784b0115bedd8",
+        "hash_cont_tokens": "0b9afff85957bc9a"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 322,
+      "non_padded": 68,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Philosophy|5": {
+      "hashes": {
+        "hash_examples": "3f86fb9c94c13d22",
+        "hash_full_prompts": "4f314ee6b028a296",
+        "hash_input_tokens": "bfa6f7e4590ea14c",
+        "hash_cont_tokens": "629d590390a7d709"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 287,
+      "non_padded": 3,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Physics_and_Chemistry|5": {
+      "hashes": {
+        "hash_examples": "8fec65af3695b62a",
+        "hash_full_prompts": "4946c67f4133bcd2",
+        "hash_input_tokens": "4acfb73b0c4ba6d1",
+        "hash_cont_tokens": "b68a341a8fadaf30"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 372,
+      "non_padded": 18,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Arabic_Wedding|5": {
+      "hashes": {
+        "hash_examples": "9cc3477184d7a4b8",
+        "hash_full_prompts": "7d55bb3d704ed684",
+        "hash_input_tokens": "d1c92bc48a12307a",
+        "hash_cont_tokens": "db136fbbba66acf3"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 390,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Bahrain|5": {
+      "hashes": {
+        "hash_examples": "c92e803a0fa8b9e2",
+        "hash_full_prompts": "be1b4f346995ec0a",
+        "hash_input_tokens": "2a05eec0933ba8f2",
+        "hash_cont_tokens": "b7d1e698bb8c1f38"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 88,
+      "non_padded": 2,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Comoros|5": {
+      "hashes": {
+        "hash_examples": "06e5d4bba8e54cae",
+        "hash_full_prompts": "5002502694357eaf",
+        "hash_input_tokens": "64909356e31de6da",
+        "hash_cont_tokens": "71ac776def0cf3c6"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 90,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Egypt_modern|5": {
+      "hashes": {
+        "hash_examples": "c6ec369164f93446",
+        "hash_full_prompts": "d36abc64c365b67a",
+        "hash_input_tokens": "c38cca35ecbcb3d2",
+        "hash_cont_tokens": "f79d462b8f2ae21b"
+      },
+      "truncated": 0,
+      "non_truncated": 95,
+      "padded": 184,
+      "non_padded": 6,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromAncientEgypt|5": {
+      "hashes": {
+        "hash_examples": "b9d56d74818b9bd4",
+        "hash_full_prompts": "291e1066a5795d9a",
+        "hash_input_tokens": "d1c7862e600bb647",
+        "hash_cont_tokens": "47ceda62fe98a529"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 389,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromByzantium|5": {
+      "hashes": {
+        "hash_examples": "5316c9624e7e59b8",
+        "hash_full_prompts": "3787d57f746e98d0",
+        "hash_input_tokens": "5260dc6faab1e2df",
+        "hash_cont_tokens": "1eb9e00962f9917d"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 290,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromChina|5": {
+      "hashes": {
+        "hash_examples": "87894bce95a56411",
+        "hash_full_prompts": "503a8884b533989e",
+        "hash_input_tokens": "f58c24be7d3f2d6d",
+        "hash_cont_tokens": "712a87eeea162dfa"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 371,
+      "non_padded": 19,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromGreece|5": {
+      "hashes": {
+        "hash_examples": "0baa78a27e469312",
+        "hash_full_prompts": "81e9040116fe5fa2",
+        "hash_input_tokens": "dcf0fb4ae47159b6",
+        "hash_cont_tokens": "bc65355737004eaa"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 347,
+      "non_padded": 43,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromIslam|5": {
+      "hashes": {
+        "hash_examples": "0c2532cde6541ff2",
+        "hash_full_prompts": "26910f4b59987e00",
+        "hash_input_tokens": "99fabd88c3dc6d73",
+        "hash_cont_tokens": "b9a10fac3c80020d"
+      },
+      "truncated": 0,
+      "non_truncated": 145,
+      "padded": 290,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromPersia|5": {
+      "hashes": {
+        "hash_examples": "efcd8112dc53c6e5",
+        "hash_full_prompts": "14e956e7740010ad",
+        "hash_input_tokens": "f3f5f965538c7b6c",
+        "hash_cont_tokens": "29dae0b45d0c3402"
+      },
+      "truncated": 0,
+      "non_truncated": 175,
+      "padded": 310,
+      "non_padded": 40,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:InfluenceFromRome|5": {
+      "hashes": {
+        "hash_examples": "9db61480e2e85fd3",
+        "hash_full_prompts": "031043cb3d0601e7",
+        "hash_input_tokens": "2684304def5993b5",
+        "hash_cont_tokens": "e76c4368e098f4ba"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 337,
+      "non_padded": 53,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Iraq|5": {
+      "hashes": {
+        "hash_examples": "96dac3dfa8d2f41f",
+        "hash_full_prompts": "314e7d813cc0ebb0",
+        "hash_input_tokens": "6acc5ef0d16ca3e4",
+        "hash_cont_tokens": "c93ed1742d6dec53"
+      },
+      "truncated": 0,
+      "non_truncated": 85,
+      "padded": 169,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Islam_Education|5": {
+      "hashes": {
+        "hash_examples": "0d80355f6a4cb51b",
+        "hash_full_prompts": "5c72236d1ab83ca8",
+        "hash_input_tokens": "af52113d5dda25cb",
+        "hash_cont_tokens": "74a8e12f0b847a14"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 389,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Islam_branches_and_schools|5": {
+      "hashes": {
+        "hash_examples": "5cedce1be2c3ad50",
+        "hash_full_prompts": "6073825f4be45d10",
+        "hash_input_tokens": "3cd038533ba26622",
+        "hash_cont_tokens": "2b7a150d8a680cc6"
+      },
+      "truncated": 0,
+      "non_truncated": 175,
+      "padded": 278,
+      "non_padded": 72,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Islamic_law_system|5": {
+      "hashes": {
+        "hash_examples": "c0e6db8bc84e105e",
+        "hash_full_prompts": "d4a26fdef76078d0",
+        "hash_input_tokens": "513592e97bb8193f",
+        "hash_cont_tokens": "e76c4368e098f4ba"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 361,
+      "non_padded": 29,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Jordan|5": {
+      "hashes": {
+        "hash_examples": "33deb5b4e5ddd6a1",
+        "hash_full_prompts": "3f74d1fb89882c0c",
+        "hash_input_tokens": "c063160ebed8ca22",
+        "hash_cont_tokens": "9704b852247e1964"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 90,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Kuwait|5": {
+      "hashes": {
+        "hash_examples": "eb41773346d7c46c",
+        "hash_full_prompts": "75a56fd0b085c6b2",
+        "hash_input_tokens": "d1b362b837550f6c",
+        "hash_cont_tokens": "b7d1e698bb8c1f38"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 90,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Lebanon|5": {
+      "hashes": {
+        "hash_examples": "25932dbf4c13d34f",
+        "hash_full_prompts": "2bcf2e3b8ff223fe",
+        "hash_input_tokens": "4685598554024249",
+        "hash_cont_tokens": "b7d1e698bb8c1f38"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 90,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Libya|5": {
+      "hashes": {
+        "hash_examples": "f2c4db63cd402926",
+        "hash_full_prompts": "e7d725abcb4313af",
+        "hash_input_tokens": "40b7486895372b7e",
+        "hash_cont_tokens": "b6e9e037a36ef6a0"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 79,
+      "non_padded": 11,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Mauritania|5": {
+      "hashes": {
+        "hash_examples": "8723ab5fdf286b54",
+        "hash_full_prompts": "f0e7d75900f14fcf",
+        "hash_input_tokens": "4dd0b0d171ce45b0",
+        "hash_cont_tokens": "582b28f138cca74f"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 75,
+      "non_padded": 15,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Mesopotamia_civilization|5": {
+      "hashes": {
+        "hash_examples": "c33f5502a6130ca9",
+        "hash_full_prompts": "8de23dd7e0dc6435",
+        "hash_input_tokens": "57eb33eb97547fc0",
+        "hash_cont_tokens": "c31889d9f7607cac"
+      },
+      "truncated": 0,
+      "non_truncated": 155,
+      "padded": 310,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Morocco|5": {
+      "hashes": {
+        "hash_examples": "588a5ed27904b1ae",
+        "hash_full_prompts": "24847db696527ca5",
+        "hash_input_tokens": "0faf2d5d355cf10d",
+        "hash_cont_tokens": "b504dfa0db7122d2"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 85,
+      "non_padded": 5,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Oman|5": {
+      "hashes": {
+        "hash_examples": "d447c52b94248b69",
+        "hash_full_prompts": "a5b8786aba97e97f",
+        "hash_input_tokens": "84983a7a7a7dfb65",
+        "hash_cont_tokens": "2837c47490dd1095"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 80,
+      "non_padded": 10,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Palestine|5": {
+      "hashes": {
+        "hash_examples": "19197e076ad14ff5",
+        "hash_full_prompts": "c4070490cd3bda3e",
+        "hash_input_tokens": "780096761f8d11e9",
+        "hash_cont_tokens": "8b92300983e353fb"
+      },
+      "truncated": 0,
+      "non_truncated": 85,
+      "padded": 167,
+      "non_padded": 3,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Qatar|5": {
+      "hashes": {
+        "hash_examples": "cf0736fa185b28f6",
+        "hash_full_prompts": "a37061703a491998",
+        "hash_input_tokens": "90705c9130ad10d1",
+        "hash_cont_tokens": "59bf29d90ce8d477"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 82,
+      "non_padded": 8,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Saudi_Arabia|5": {
+      "hashes": {
+        "hash_examples": "69beda6e1b85a08d",
+        "hash_full_prompts": "33655b54c7bcc6db",
+        "hash_input_tokens": "7f7f4f2000a9e51c",
+        "hash_cont_tokens": "0b9afff85957bc9a"
+      },
+      "truncated": 0,
+      "non_truncated": 195,
+      "padded": 384,
+      "non_padded": 6,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Somalia|5": {
+      "hashes": {
+        "hash_examples": "b387940c65784fbf",
+        "hash_full_prompts": "9f380e51f126e8e3",
+        "hash_input_tokens": "50794ddbf35e3a5c",
+        "hash_cont_tokens": "1e66c89698749553"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 79,
+      "non_padded": 11,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Sudan|5": {
+      "hashes": {
+        "hash_examples": "e02c32b9d2dd0c3f",
+        "hash_full_prompts": "ed1ff80cdafbb906",
+        "hash_input_tokens": "9c24beb409e972b8",
+        "hash_cont_tokens": "1e66c89698749553"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 90,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Syria|5": {
+      "hashes": {
+        "hash_examples": "60a6f8fe73bda4bb",
+        "hash_full_prompts": "24478f579bfa86a2",
+        "hash_input_tokens": "801273aa4bde4dd4",
+        "hash_cont_tokens": "b7d1e698bb8c1f38"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 82,
+      "non_padded": 8,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Tunisia|5": {
+      "hashes": {
+        "hash_examples": "34bb15d3830c5649",
+        "hash_full_prompts": "33ee55e0c12fcd78",
+        "hash_input_tokens": "d287508b5acfce5e",
+        "hash_cont_tokens": "38666267dd6d8f2c"
+      },
+      "truncated": 0,
+      "non_truncated": 45,
+      "padded": 88,
+      "non_padded": 2,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:United_Arab_Emirates|5": {
+      "hashes": {
+        "hash_examples": "98a0ba78172718ce",
+        "hash_full_prompts": "513edd41b5b39486",
+        "hash_input_tokens": "ec61aa28ad3c346f",
+        "hash_cont_tokens": "4971c0c062e422a3"
+      },
+      "truncated": 0,
+      "non_truncated": 85,
+      "padded": 148,
+      "non_padded": 22,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:Yemen|5": {
+      "hashes": {
+        "hash_examples": "18e9bcccbb4ced7a",
+        "hash_full_prompts": "5bb795ad5c240147",
+        "hash_input_tokens": "9ecd238e60e3fa8b",
+        "hash_cont_tokens": "498e3feb66ae1aa9"
+      },
+      "truncated": 0,
+      "non_truncated": 10,
+      "padded": 20,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:communication|5": {
+      "hashes": {
+        "hash_examples": "9ff28ab5eab5c97b",
+        "hash_full_prompts": "e6adba04b96e808d",
+        "hash_input_tokens": "4e6424a98e0e16b7",
+        "hash_cont_tokens": "b8360cd3be26d7b3"
+      },
+      "truncated": 0,
+      "non_truncated": 364,
+      "padded": 728,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:computer_and_phone|5": {
+      "hashes": {
+        "hash_examples": "37bac2f086aaf6c2",
+        "hash_full_prompts": "20ca19372ec6bb12",
+        "hash_input_tokens": "a74fb0ee0304127f",
+        "hash_cont_tokens": "463f86d7cd913604"
+      },
+      "truncated": 0,
+      "non_truncated": 295,
+      "padded": 589,
+      "non_padded": 1,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:daily_life|5": {
+      "hashes": {
+        "hash_examples": "bf07363c1c252e2f",
+        "hash_full_prompts": "971ea143f1975413",
+        "hash_input_tokens": "a756c77407b2215c",
+        "hash_cont_tokens": "c3ed7d09a7659433"
+      },
+      "truncated": 0,
+      "non_truncated": 337,
+      "padded": 674,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|acva:entertainment|5": {
+      "hashes": {
+        "hash_examples": "37077bc00f0ac56a",
+        "hash_full_prompts": "00278d9786c51665",
+        "hash_input_tokens": "42a5c43b236e143d",
+        "hash_cont_tokens": "5eb7169a486c619f"
+      },
+      "truncated": 0,
+      "non_truncated": 295,
+      "padded": 494,
+      "non_padded": 96,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "a3d21325abaff962",
+      "hash_full_prompts": "4233da7dc9076afe",
+      "hash_input_tokens": "5778bbaa7ad82d2e",
+      "hash_cont_tokens": "21a5232bbc5e356c"
+    },
+    "truncated": 0,
+    "non_truncated": 8710,
+    "padded": 16714,
+    "non_padded": 706,
+    "num_truncated_few_shots": 0
+  }
+}
