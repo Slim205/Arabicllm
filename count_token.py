@@ -1,8 +1,8 @@
 from datasets import load_dataset
-from transformers import AutoTokenizer
+#from transformers import AutoTokenizer
 
 # Load the tokenizer
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+#tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
 
 # Load the dataset
 dataset = load_dataset("CohereForAI/aya_collection_language_split", "standard_arabic")

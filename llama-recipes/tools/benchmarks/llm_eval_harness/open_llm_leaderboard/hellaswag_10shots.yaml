@@ -1,0 +1,6 @@
+include: /gpfs/users/barkallasl/en_leaderboard/lm-evaluation-harness/lm_eval/tasks/hellaswag/hellaswag.yaml
+task: hellaswag_10_shot
+task_alias: hellaswag 10 shot
+num_fewshot: 10
+metric_list:
+  - metric: acc_norm
