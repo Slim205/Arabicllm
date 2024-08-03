@@ -1,0 +1,72 @@
+base_model: google/gemma-2-2b-it #modified
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_8bit: false
+load_in_4bit: false #modified
+strict: false
+
+# huggingface repo
+chat_template: gemma
+datasets:
+  - path: Slim205/processed_aya_collection_language_split_standard_arabic_cleaned  
+    type: chat_template
+    chat_template: gemma
+    drop_system_message: true
+val_set_size: 0.1
+output_dir: /gpfs/workdir/barkallasl/outputs/Aya_lora_1e-4_4_4_4
+
+sequence_len: 2048
+sample_packing: false 
+eval_sample_packing: false
+pad_to_sequence_len: true 
+
+#torch_compile: true #NEW LINE
+gradient_accumulation_steps: 4
+micro_batch_size: 4 
+eval_batch_size : 4
+num_epochs: 4 #modified
+optimizer: adamw_torch 
+lr_scheduler: cosine
+learning_rate: 0.0001  
+eval_steps : 100 # NEW LINE
+
+wandb_project:  "axolotl"
+wandb_entity:
+wandb_watch:
+wandb_name: "Aya_lora_1e-4_2048_4_4_4"
+wandb_log_model:
+WANDB__SERVICE_WAIT : 300
+
+
+train_on_inputs: false
+group_by_length: false
+bf16: auto
+fp16: 
+tf32: true 
+
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint: #/gpfs/workdir/barkallasl/outputs/out2/checkpoint-843
+local_rank:
+logging_steps: #1
+xformers_attention:
+flash_attention: true #true only for A100
+
+warmup_ratio: #0.1
+evals_per_epoch:
+eval_table_size:
+eval_max_new_tokens: #modified
+saves_per_epoch: 1
+debug:
+deepspeed:
+weight_decay: 0.0
+fsdp:
+fsdp_config:
+special_tokens:
+
+adapter: lora 
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_linear: true
