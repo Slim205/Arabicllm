@@ -12,9 +12,9 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
     prompts = []
 
     def apply_chat_template(text) : 
-        prompt = [{"role": "user", "content": f"Translate the following text to {target_language}:\n\n{text}"},{"role": "assistant", "content" : "" }]
-        inputs= tokenizer.apply_chat_template(prompt)
-        return tokenizer.decode(inputs[:-1])
+        prompt = [{"role": "user", "content": f"Translate the following text to {target_language}:\n\n{text}"}]
+        prompt_with_chat_template= tokenizer.apply_chat_template(prompt, add_generation_prompt=True,  tokenize=False)
+        return prompt_with_chat_template
 
     for example in dataset:        
         prompts.append(apply_chat_template(example['question']))
