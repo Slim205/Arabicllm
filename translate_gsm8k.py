@@ -1,41 +1,43 @@
 import fire
 from vllm import LLM
-from datasets import load_dataset, DatasetDict
-import torch
+from datasets import load_dataset, DatasetDict,Dataset
+from transformers import AutoTokenizer
 
-def translate_gsm8k(model_name: str, language: str = 'Arabic', output_path: str = './translated_gsm8k.pt', repo_name: str = 'Slim205/translated-gsm8k'):
+def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_path: str = './translated_gsm8k', repo_name: str = 'Slim205/translated-gsm8k'):
 
-    # Load the dataset
     dataset = load_dataset("openai/gsm8k", "main")
     dataset = dataset['train'].select(range(10))
-    
-    # Initialize the LLM with the specified model
-    llm = LLM(model_name) #gpu_memory_utilization=,max_model_len=4096
-    
-    # Function to translate text
-    def translate(text, target_language):
-        prompt0 = f"Translate the following text to {target_language}:\n\n{text}"
-        prompt = f"<|begin_of_text|><|start_header_id|>system<|end_header_id|><|eot_id|><|start_header_id|>user<|end_header_id|>{ prompt0 }<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-        output = llm.generate(prompt)
-        return output[0].outputs[0].text
+    prompts = []
 
-    # Function to apply to each example
-    def translate_example(example):
-        example['question'] = translate(example['question'], language)
-        example['answer'] = translate(example['answer'], language)
-        return example
+    def apply_chat_template(text) : 
+        prompt = [{"role": "user", "content": f"Translate the following text to {target_language}:\n\n{text}"},{"role": "assistant", "content" : "" }]
+        inputs= tokenizer.apply_chat_template(prompt)
+        return tokenizer.decode(inputs[:-1])
 
-    # Apply translation to each example using map
-    translated_dataset = dataset.map(translate_example)
+    for example in dataset:        
+        prompts.append(apply_chat_template(example['question']))
+        prompts.append(apply_chat_template(example['answer']))
 
-    # Create a DatasetDict
-    dataset_dict = DatasetDict({'train': translated_dataset})
+    llm = LLM(model_name)
+    outputs = llm.generate(prompts)
 
-    torch.save(dataset_dict, output_path)
+    question_translated=[]
+    answer_translated = []
+    for i, item in enumerate(outputs):
+        if i % 2 ==0 : 
+            question_translated.append(item.outputs[0].text)
+        else:
+            answer_translated.append(item.outputs[0].text)
+
+    data = { "question": question_translated, "answer": answer_translated}
+    dataset = Dataset.from_dict(data)
+    dataset_dict = DatasetDict({"train": dataset})
+
+    dataset_dict.save_to_disk(output_path)
     print(f"Translated dataset saved to {output_path}")
 
-    # Push the dataset to Hugging Face
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")
 
