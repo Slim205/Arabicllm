@@ -15,7 +15,7 @@ def get_custom_dataset(dataset_config, tokenizer, split, cache_dir="cached_datas
             start_index = total_size // 2
             tokenized_dataset = tokenized_dataset.select(range(start_index, total_size))
         elif subset == "first_half":
-            total_size = len(tokenized_dataset)#*0+200
+            total_size = len(tokenized_dataset)*0+200
             end_index = total_size 
             if split == 'validation' :
                 end_index = 100

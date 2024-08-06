@@ -1,3 +1,2 @@
-lighteval|xstory_cloze:ar|0|0
-community|arabic_mmlu:abstract_algebra|0|1
-community|arabic_mmlu:anatomy|0|1
+community|copa_ext_ar|0|1
+community|toxigen_ar|0|1
