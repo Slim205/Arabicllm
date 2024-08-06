@@ -10,7 +10,7 @@ def translate_gsm8k(model_name: str, language: str = 'Arabic', output_path: str 
     dataset = dataset['train'].select(range(10))
     
     # Initialize the LLM with the specified model
-    llm = LLM(model_name,max_model_len=4096) #gpu_memory_utilization
+    llm = LLM(model_name) #gpu_memory_utilization=,max_model_len=4096
     
     # Function to translate text
     def translate(text, target_language):
