@@ -14,7 +14,9 @@ def translate_gsm8k(model_name: str, language: str = 'Arabic', output_path: str 
     
     # Function to translate text
     def translate(text, target_language):
-        prompt = f"Translate the following text to {target_language}:\n\n{text}"
+        prompt0 = f"Translate the following text to {target_language}:\n\n{text}"
+        prompt = f"<|begin_of_text|><|start_header_id|>system<|end_header_id|><|eot_id|><|start_header_id|>user<|end_header_id|>{ prompt0 }<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
+
         output = llm.generate(prompt)
         return output[0].outputs[0].text
 
