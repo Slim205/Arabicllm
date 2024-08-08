@@ -1,11 +1,14 @@
 import fire
 from vllm import LLM,SamplingParams
 from datasets import load_dataset, DatasetDict,Dataset
+from transformers import AutoTokenizer
 
 def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_path: str = './translated_gsm8k', repo_name: str = 'Slim205/translated-gsm8k'):
 
     dataset = load_dataset("openai/gsm8k", "main")
     dataset = dataset['train'].select(range(20))
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
     prompts = []
 
     def apply_chat_template_question(text) : 
@@ -35,7 +38,7 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
 
-    def apply_chat_template_question_answer(text) : 
+    def apply_chat_template_answer(text) : 
         example0 = "Natalia sold 48/2 = <<48/2=24>>24 clips in May. Natalia sold 48+24 = <<48+24=72>>72 clips altogether in April and May. #### 72"
         response0 = "ناتاليا باعت 48/2 = 24 مشبكاً في مايو. ناتاليا باعت 48 + 24 = 72 مشبكاً إجمالاً في أبريل ومايو. #### 72"
         example1 = "Weng earns 12/60 = $<<12/60=0.2>>0.2 per minute. Working 50 minutes, she earned 0.2 x 50 = $<<0.2*50=10>>10. #### 10"
@@ -72,13 +75,13 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         llm = LLM(model_name, tensor_parallel_size=4,max_model_len=816,gpu_memory_utilization=0.95) 
 
     elif model_name == "google/gemma-2-27b-it" : 
-        llm = LLM(model_name, tensor_parallel_size=2,gpu_memory_utilization=0.8) 
+        llm = LLM(model_name, tensor_parallel_size=2,max_model_len=2048,gpu_memory_utilization=0.8) 
 
     elif model_name == "meta-llama/Meta-Llama-3.1-70B-Instruct" : 
         llm = LLM(model_name, tensor_parallel_size=4,max_model_len=816,gpu_memory_utilization=0.95) 
 
     else :
-        llm = LLM(model_name) 
+        llm = LLM(model_name,max_model_len=2048) 
 
     #sampling_params = SamplingParams(max_tokens=100,use_beam_search=True,early_stopping=True,best_of=3,temperature=0)
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
