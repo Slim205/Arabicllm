@@ -13,8 +13,8 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         response0="جيمس يكتب رسالة مكونة من 3 صفحات إلى صديقين مختلفين مرتين في الأسبوع. كم عدد الصفحات التي يكتبها في السنة؟"
         example1= "Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?"
         response1="وينغ تكسب 12 دولاراً في الساعة مقابل رعاية الأطفال. بالأمس، قامت برعاية الأطفال لمدة 50 دقيقة فقط. كم كسبت؟"
-        example 2 ="There are 290 liters of oil in 24 cans. If 10 of the cans are holding 8 liters each, how much oil is each of the remaining cans holding?"
-        response 2 = "هناك 290 لتراً من الزيت في 24 علبة. إذا كانت 10 من العلب تحتوي على 8 لترات لكل منها، فكم كمية الزيت الموجودة في كل واحدة من العلب المتبقية؟"
+        example2 ="There are 290 liters of oil in 24 cans. If 10 of the cans are holding 8 liters each, how much oil is each of the remaining cans holding?"
+        response2 = "هناك 290 لتراً من الزيت في 24 علبة. إذا كانت 10 من العلب تحتوي على 8 لترات لكل منها، فكم كمية الزيت الموجودة في كل واحدة من العلب المتبقية؟"
         example3 = "Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?"
         response3 = "جوي تستطيع قراءة 8 صفحات من كتاب في 20 دقيقة. كم ساعة ستستغرق لقراءة 120 صفحة؟"
         example4 = "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?"
@@ -48,17 +48,17 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         response4 = "بن جمع 36/3 = 12 قشرة. آلان جمع 12 * 4 = 48 قشرة. #### 48"
 
         messages = [
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example0}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {example0}"},
             {"role": "assistant", "content": response0},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example1}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {example1}"},
             {"role": "assistant", "content": response1},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example2}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {example2}"},
             {"role": "assistant", "content": response2},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example3}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {example3}"},
             {"role": "assistant", "content": response3},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example4}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {example4}"},
             {"role": "assistant", "content": response4},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {text}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic : {text}"},
         ]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
