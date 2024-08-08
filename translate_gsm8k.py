@@ -23,17 +23,19 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         example4 = "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?"
         response4 = "هناك 25 وردة في الحديقة. هناك 40 زهرة توليب. هناك 35 زهرة أقحوان. ما هي نسبة الزهور التي ليست وروداً؟"
         messages = [
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example0}"},
+       #     { "role": "system","content" : "You are an expert in translating from English to Arabic. Translate the given sentences without further explanation. Only provide the translation."},
+
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation: {example0}"},
             {"role": "assistant", "content": response0},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example1}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example1}"},
             {"role": "assistant", "content": response1},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example2}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example2}"},
             {"role": "assistant", "content": response2},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example3}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example3}"},
             {"role": "assistant", "content": response3},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {example4}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example4}"},
             {"role": "assistant", "content": response4},
-            {"role": "user", "content": f"Translate the following English text to {target_language} : {text}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {text}"},
         ]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
@@ -51,17 +53,18 @@ def translate_gsm8k(model_name: str, target_language: str = 'Arabic', output_pat
         response4 = "بن جمع 36/3 = 12 قشرة. آلان جمع 12 * 4 = 48 قشرة. #### 48"
 
         messages = [
-            {"role": "user", "content": f"Translate the following English text to Arabic : {example0}"},
+         #   { "role": "system","content" : "You are an expert in translating from English to Arabic. Translate the given sentences without further explanation. Only provide the translation."},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example0}"},
             {"role": "assistant", "content": response0},
-            {"role": "user", "content": f"Translate the following English text to Arabic : {example1}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example1}"},
             {"role": "assistant", "content": response1},
-            {"role": "user", "content": f"Translate the following English text to Arabic : {example2}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example2}"},
             {"role": "assistant", "content": response2},
-            {"role": "user", "content": f"Translate the following English text to Arabic : {example3}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example3}"},
             {"role": "assistant", "content": response3},
-            {"role": "user", "content": f"Translate the following English text to Arabic : {example4}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {example4}"},
             {"role": "assistant", "content": response4},
-            {"role": "user", "content": f"Translate the following English text to Arabic : {text}"},
+            {"role": "user", "content": f"Translate the following English text to Arabic without any explanation : {text}"},
         ]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
