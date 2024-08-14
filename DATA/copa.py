@@ -10,11 +10,9 @@ def copa(model_name: str, repo_name: str):
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    prompts = []
-
     def get_question(sample) : 
         prompt = f"""
-Please create a question that incorporates the following premise and two options. The question should be designed to reflect a choice between these two options.
+Please create a question that incorporates the following premise and options, reflecting a choice between the two. Include both options in the question.
 
 Premise: {sample['premise']}
 Options: {sample['choice1']}, {sample['choice2']}
@@ -26,48 +24,54 @@ Generate the question directly, without adding any tags, comments, or references
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
 
-    def get_sample_answer(sample) :
-        if int(sample['label']) == 0 : 
+    def get_correct_option(sample) :
+        if int(sample['label']) == 0 :
             return sample['choice1']
-        if int(sample['label']) == 1 : 
+        else :
             return sample['choice2']
-
     def get_answer(sample) : 
         prompt = f"""
-Please formulate an answer that addresses the {sample['question']} of the following premise.
+Answer the following question with a brief justification (one sentence is sufficient):
 
-Premise: {sample['premise']}
-Answer: {get_sample_answer(sample)}
+{sample['ift_instruction']}
 
-Generate your response directly, without including any tags, comments, or references to the provided text.
+(Note: The correct option is {get_correct_option(sample)}.)
+
+Respond directly, avoiding any tags, comments, or references to the input text.
 """
+
         messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
 
+    prompts = []
+
     for example in dataset:        
         prompts.append(get_question(example))
+
+    print(prompts[0])
+    llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
+    sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
+    outputs = llm.generate(prompts,sampling_params)
+    llm_questions=[]
+    for i, item in enumerate(outputs):
+        llm_questions.append(item.outputs[0].text)
+
+    dataset = dataset.add_column("ift_instruction", llm_questions)
+
+
+    prompts = []
+
+    for example in dataset:        
         prompts.append(get_answer(example))
 
     print(prompts[0])
-
-
-    llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
-
-    sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
     
     llm_answers=[]
-    llm_questions=[]
     for i, item in enumerate(outputs):
+        llm_answers.append(item.outputs[0].text)
 
-        #llm_questions.append(item.outputs[0].text)
-        if i % 2 == 0 :
-            llm_questions.append(item.outputs[0].text)
-        else :
-            llm_answers.append(item.outputs[0].text)
-
-    dataset = dataset.add_column("ift_instruction", llm_questions)
     dataset = dataset.add_column("ift_answer", llm_answers)
 
     dataset_dict = DatasetDict({"train": dataset})
