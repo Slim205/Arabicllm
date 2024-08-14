@@ -39,7 +39,6 @@ Answer the following question with a brief justification (one sentence is suffic
 
 Respond directly, avoiding any tags, comments, or references to the input text.
 """
-
         messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
@@ -72,7 +71,42 @@ Respond directly, avoiding any tags, comments, or references to the input text.
     for i, item in enumerate(outputs):
         llm_answers.append(item.outputs[0].text)
 
-    dataset = dataset.add_column("ift_answer", llm_answers)
+    dataset = dataset.add_column("ift_answer_intermediate", llm_answers)
+
+    def get_str(s) :
+        if int(s)==0:
+            return "first"
+        return "second"
+
+    def get_rank(sample) : 
+        prompt = f"""
+Combine these two sentences into a complete response, maintaining their distinct meanings and keeping them separate.
+
+The {get_str(sample['label'])} option is the correct option.
+{sample['ift_answer_intermediate']} 
+
+Please respond concisely, without adding any tags, comments, or references to the input.
+"""
+
+
+        messages = [{"role": "user", "content":prompt}]
+        prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
+        return prompt_with_chat_template
+
+    prompts = []
+
+    for example in dataset:        
+        prompts.append(get_rank(example))
+
+    print(prompts[0])
+    outputs = llm.generate(prompts,sampling_params)
+    llm_answers_rank=[]
+    for i, item in enumerate(outputs):
+        llm_answers_rank.append(item.outputs[0].text)
+
+    dataset = dataset.add_column("ift_answer", llm_answers_rank)
+    dataset = dataset.remove_columns("ift_answer_intermediate")
+
 
     dataset_dict = DatasetDict({"train": dataset})
 
