@@ -7,7 +7,7 @@ import torch
 def boolq(model_name: str, repo_name: str):
 
     dataset = load_dataset("google/boolq")
-    dataset = dataset['train'].select(range(20))
+    dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     prompts = []
@@ -15,14 +15,14 @@ def boolq(model_name: str, repo_name: str):
     def apply_chat_template(sample) : 
 
         prompt = f"""
-        Please read the text below and provide a more detailed response to the question that follows:
+Please read the text below and provide a more detailed response to the question that follows, without mentioning or referring to the original text:
 
-        Text: {sample['passage']}
-        Question: {sample['question']}
-        Answer: {sample['answer']}
+Text: {sample['passage']}
+Question: {sample['question']}
+Answer: {sample['answer']}
 
-        Generate your response without including any tags, comments, or additional text.
-        """
+Generate your response without including any tags, comments, or references to the provided text.
+"""
         messages = [
             {"role": "user", "content":prompt},
 
