@@ -3,19 +3,19 @@ from vllm import LLM,SamplingParams
 from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
-
+#Need to be filtered after : ?
 def give_answer(id,options) :
     index = ord(id)-ord('A')
     return options[index]
 
 def get_instruction(question, text):
     instruction = f"""
-    {text}
+    « {text} »
 
     {question}
     """
     return instruction
-
+    
 def race(model_name: str, repo_name: str):
 
     dataset = load_dataset("ehovy/race","all")

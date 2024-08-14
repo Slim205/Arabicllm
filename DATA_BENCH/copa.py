@@ -12,39 +12,52 @@ def copa(model_name: str, repo_name: str):
 
     prompts = []
 
-    def apply_chat_template(sample) : 
-
+    def get_answer(sample) : 
         prompt = f"""
 Please read the text below and provide a more detailed response to the question that follows, without mentioning or referring to the original text:
 
-Text: {sample['passage']}
+Text: {sample['article']}
 Question: {sample['question']}
-Answer: {sample['answer']}
+Answer: {give_answer(sample['answer'],sample['options'])}
 
 Generate your response without including any tags, comments, or references to the provided text.
 """
-        messages = [
-            {"role": "user", "content":prompt},
-
-        ]
+        messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
 
+    def get_question(sample) : 
+        prompt = f"Generate a question that asks about the {sample['question']} of the following fact: {sample['premise']}. Please generate your response without including any tags, comments, or references to the provided text."
+        messages = [{"role": "user", "content":prompt}]
+        prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
+        return prompt_with_chat_template
+
+
     for example in dataset:        
-        prompts.append(apply_chat_template(example))
+        prompts.append(get_question(example))
+        #prompts.append(get_answer(example))
 
     print(prompts[0])
+
 
     llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
-
-    llm_answers=[]
-    for i, item in enumerate(outputs):
-        llm_answers.append(item.outputs[0].text)
     
-    dataset = dataset.add_column("ift_answer", llm_answers)
+    #llm_answers=[]
+    llm_questions=[]
+    for i, item in enumerate(outputs):
+
+        llm_questions.append(item.outputs[0].text)
+        #if i % 2 == 0 :
+         #   llm_questions.append(get_instruction(item.outputs[0].text,dataset['article'][i//2]))
+        #else :
+         #   llm_answers.append(item.outputs[0].text)
+
+    dataset = dataset.add_column("ift_instruction", llm_questions)
+    #dataset = dataset.add_column("ift_answer", llm_answers)
+
     dataset_dict = DatasetDict({"train": dataset})
 
    # dataset_dict.save_to_disk(output_path)
