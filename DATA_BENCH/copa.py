@@ -4,9 +4,9 @@ from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
 
-def boolq(model_name: str, repo_name: str):
+def copa(model_name: str, repo_name: str):
 
-    dataset = load_dataset("google/boolq")
+    dataset = load_dataset("stjokerli/TextToText_copa")
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -35,10 +35,7 @@ Generate your response without including any tags, comments, or references to th
 
     print(prompts[0])
 
-    if model_name == "google/gemma-2-27b-it" :
-        llm = LLM(model_name, dtype=torch.float16,tensor_parallel_size=2,max_model_len=2048,gpu_memory_utilization=0.8) 
-    else : 
-        llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
+    llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
@@ -57,4 +54,4 @@ Generate your response without including any tags, comments, or references to th
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")
 
 if __name__ == '__main__':
-    fire.Fire(boolq)
+    fire.Fire(copa)
