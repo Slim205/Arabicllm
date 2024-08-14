@@ -38,14 +38,14 @@ def boolq(model_name: str, repo_name: str):
 
     print(prompts[0])
 
-    
-    llm = LLM(model_name, dtype=torch.float16,tensor_parallel_size=2,max_model_len=2048,gpu_memory_utilization=0.8) 
-
+    if model_name == "google/gemma-2-27b-it" :
+        llm = LLM(model_name, dtype=torch.float16,tensor_parallel_size=2,max_model_len=2048,gpu_memory_utilization=0.8) 
+    else : 
+        llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
 
-    llm_questions = []
     llm_answers=[]
     for i, item in enumerate(outputs):
         llm_answers.append(item.outputs[0].text)
