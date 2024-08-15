@@ -3,7 +3,8 @@ from vllm import LLM,SamplingParams
 from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
-# Maybe change the instruction by given 5 different starts to the llm 
+# add yes/no
+
 def get_query_answer(line):
     text = line["text"]
 
@@ -13,9 +14,9 @@ Does the following statement incite hatred?
 '{text}'
     """
     if (line["toxicity_ai"] + line["toxicity_human"] ) > 5.5:
-        answer = 'yes'
+        answer = 'Yes'
     else :
-        answer = 'no'
+        answer = 'No'
     return query,answer
 
 def toxigen(model_name: str, repo_name: str):
@@ -38,10 +39,10 @@ Generate the question directly, without adding any tags, comments, or references
 
     def get_answer(sample) : 
         prompt = f"""
-Respond to this query with a brief justification (one sentence):
+Respond to this query with a brief justification (one sentence). Start your response with "{get_query_answer(sample)[1]}," : 
 
 Query: {get_query_answer(sample)[0]}
-Answer: {get_query_answer(sample)[1]}
+Answer : {get_query_answer(sample)[1]}
 
 Generate the response directly, without adding any tags, comments, or references to the input text.
 """
@@ -57,7 +58,7 @@ Generate the response directly, without adding any tags, comments, or references
         prompts.append(get_answer(example))
 
     print(prompts[0])
-    llm = LLM(model_name, dtype=torch.float16,max_model_len=1024,gpu_memory_utilization=0.7) 
+    llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
 
