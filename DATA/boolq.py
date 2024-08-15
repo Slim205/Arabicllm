@@ -13,7 +13,7 @@ def get_instruction(question, text):
     return instruction
 
 
-def boolq(model_name: str, repo_name: str):
+def boolq(model_name: str, repo_name: str,output_path: str = './boolq'):
 
     dataset = load_dataset("google/boolq")
     dataset = dataset['train'].select(range(50))
@@ -58,8 +58,8 @@ Generate your response without including any tags, comments, or references to th
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")

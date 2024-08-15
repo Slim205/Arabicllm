@@ -19,7 +19,7 @@ Does the following statement incite hatred?
         answer = 'No'
     return query,answer
 
-def toxigen(model_name: str, repo_name: str):
+def toxigen(model_name: str, repo_name: str, output_path: str = './toxigen'):
     dataset = load_dataset("toxigen/toxigen-data")
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -79,8 +79,8 @@ Generate the response directly, without adding any tags, comments, or references
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")

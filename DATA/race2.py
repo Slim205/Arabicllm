@@ -4,18 +4,39 @@ from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
 
-def piqa(model_name: str, repo_name: str,output_path: str = './piqa'):
+def get_str(s) :
+    if s==0:
+        return "first"
+    elif  s==1 :
+        return "second"
+    elif s == 2 :
+        return "third"
+    else :
+        return "last"
 
-    dataset = load_dataset("generate_piqa_data.py")
+def get_instruction(question, text):
+    instruction = f"""
+    « {text} »
+
+    {question}
+    """
+    return instruction
+
+def get_correct_option(sample) :
+    column_name = 'choice' + str(sample['label']+1)
+    return sample[column_name]
+
+def race(model_name: str, repo_name: str,output_path: str = './race'):
+    dataset = load_dataset("ehovy/race","all")
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def get_question(sample) : 
         prompt = f"""
-Please create a question that incorporates the following premise and options, reflecting a choice between the two. Include both options in the question.
+Please create a more detailed question that incorporates the following options, reflecting a choice between them. Include all options in the question.
 
-Premise: {sample['goal']}
-Options: {sample['sol1']}, {sample['sol2']}
+Question: {sample['question']}
+Options: {sample['options'][0]}, {sample['options'][1]}, {sample['options'][2]}, {sample['options'][3]},
 
 Generate the question directly, without adding any tags, comments, or references to the input text.
 """
@@ -24,20 +45,15 @@ Generate the question directly, without adding any tags, comments, or references
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
 
-    def get_correct_option(sample) :
-        if int(sample['label']) == 0 :
-            return sample['sol1']
-        else :
-            return sample['sol2']
     def get_answer(sample) : 
         prompt = f"""
-Answer the following question with a brief justification (one sentence is sufficient):
+Read the text below and answer the following question with a brief justification (one sentence is sufficient):
 
 {sample['ift_instruction']}
 
-(Note: The correct option is {get_correct_option(sample)}.)
+Answer: {sample['correct_answer']}
 
-Respond directly, avoiding any tags, comments, or references to the input text.
+Generate your response without including any tags, comments, or references to the provided text.
 """
         messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
@@ -52,18 +68,15 @@ Respond directly, avoiding any tags, comments, or references to the input text.
     llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
+
     llm_questions=[]
     for i, item in enumerate(outputs):
-        llm_questions.append(item.outputs[0].text)
-
+        llm_questions.append(get_instruction(item.outputs[0].text,dataset[i]['article']))
     dataset = dataset.add_column("ift_instruction", llm_questions)
 
-
     prompts = []
-
     for example in dataset:        
         prompts.append(get_answer(example))
-
     print(prompts[0])
     outputs = llm.generate(prompts,sampling_params)
     
@@ -73,10 +86,6 @@ Respond directly, avoiding any tags, comments, or references to the input text.
 
     dataset = dataset.add_column("ift_answer_intermediate", llm_answers)
 
-    def get_str(s) :
-        if int(s)==0:
-            return "first"
-        return "second"
 
     def get_rank(sample) : 
         prompt = f"""
@@ -105,7 +114,8 @@ Please respond concisely, without adding any tags, comments, or references to th
         llm_answers_rank.append(item.outputs[0].text)
 
     dataset = dataset.add_column("ift_answer", llm_answers_rank)
-    dataset = dataset.remove_columns("ift_answer_intermediate")
+  
+    dataset = dataset.remove_columns( "ift_answer_intermediate")
 
 
     dataset_dict = DatasetDict({"train": dataset})
@@ -115,6 +125,5 @@ Please respond concisely, without adding any tags, comments, or references to th
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")
-
 if __name__ == '__main__':
-    fire.Fire(piqa)
+    fire.Fire(race)

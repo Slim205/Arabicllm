@@ -51,7 +51,7 @@ def get_correct_option(sample) :
     column_name = 'choice' + str(sample['label']+1)
     return sample[column_name]
 
-def sciq(model_name: str, repo_name: str):
+def sciq(model_name: str, repo_name: str,output_path: str = './sciq'):
     dataset = load_dataset("allenai/sciq")
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -94,19 +94,15 @@ Generate your response without including any tags, comments, or references to th
     llm = LLM(model_name, dtype=torch.float16,max_model_len=2048) 
     sampling_params = SamplingParams(max_tokens=512,temperature=0.8, top_p=0.95)
     outputs = llm.generate(prompts,sampling_params)
+
     llm_questions=[]
-    
     for i, item in enumerate(outputs):
         llm_questions.append(get_instruction(item.outputs[0].text,dataset[i]['support']))
-
     dataset = dataset.add_column("ift_instruction", llm_questions)
 
-
     prompts = []
-
     for example in dataset:        
         prompts.append(get_answer(example))
-
     print(prompts[0])
     outputs = llm.generate(prompts,sampling_params)
     
@@ -144,17 +140,14 @@ Please respond concisely, without adding any tags, comments, or references to th
         llm_answers_rank.append(item.outputs[0].text)
 
     dataset = dataset.add_column("ift_answer", llm_answers_rank)
-    dataset = dataset.remove_columns("ift_answer_intermediate")
-    dataset = dataset.remove_columns("choice1")
-    dataset = dataset.remove_columns("choice2")
-    dataset = dataset.remove_columns("choice3")
-    dataset = dataset.remove_columns("choice4")
+    columns_to_remove = ["ift_answer_intermediate", "choice1", "choice2", "choice3", "choice4", "label"]
+    dataset = dataset.remove_columns(columns_to_remove)
 
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")

@@ -35,7 +35,7 @@ def get_str(s) :
         return "last"
 
 
-def arc(model_name: str, repo_name: str):
+def arc(model_name: str, repo_name: str,output_path: str = './arc_easy'):
 
     dataset = load_dataset("allenai/ai2_arc", "ARC-Easy")
     dataset = dataset['train'].select(range(50))
@@ -132,8 +132,8 @@ Please respond concisely, without adding any tags, comments, or references to th
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")

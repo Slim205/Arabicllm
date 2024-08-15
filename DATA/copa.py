@@ -4,7 +4,7 @@ from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
 
-def copa(model_name: str, repo_name: str):
+def copa(model_name: str, repo_name: str,output_path: str = './copa'):
 
     dataset = load_dataset("stjokerli/TextToText_copa")
     dataset = dataset['train'].select(range(50))
@@ -110,8 +110,8 @@ Please respond concisely, without adding any tags, comments, or references to th
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")
