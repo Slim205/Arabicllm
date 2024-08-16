@@ -36,10 +36,9 @@ Kanun (instrument)
 Zār
 Labīd
 Culture of the United Arab Emirates
-Arab (literature)
 Self-censorship
-Egyptian cuisine
 Rhythm in Arabian music
+Egyptian cuisine
 Rhythm
 Jisr az-Zarqa
 Attar (god)
@@ -67,8 +66,8 @@ Sin (mythology)
 Zulfiqar
 Abdul Alhazred
 Television stations
-Antarah ibn Shaddad
 Middle-Eastern dance
+Antarah ibn Shaddad
 Secular
 Islamic ornament
 Satellite
@@ -134,7 +133,6 @@ Saudi Arabia
 Theandrios
 Altaïr Ibn-La'Ahad
 Mosque
-Rajaz (prosody)
 State of Palestine
 Sufi whirling
 Religion
@@ -205,6 +203,7 @@ Falak (Arabian legend)
 Libya
 Tharwat Abaza
 History of the Arabs
+Arab culture
 Qasr al-Hayr al-Gharbî
 Iwan
 Syria
@@ -385,6 +384,7 @@ Somali literature
 Melody
 Committee to Protect Journalists
 Kaftan
+Caravanserai
 Dabke
 Santoor (Persian instrument)
 Algerian scale
@@ -601,7 +601,7 @@ Béla Bartók
 Banna'i
 Avicennism
 Al Jazeera Media Network
-Caravanserai
+Rajaz (prosody)
 Comoros
 Layali
 Magazines

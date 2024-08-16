@@ -1,5 +1,6 @@
 import wikipedia as w
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
+from tqdm import tqdm
 
 def save_list_to_file(filename, data_list):
     with open(filename, 'w') as f:
@@ -9,54 +10,64 @@ def save_list_to_file(filename, data_list):
 def fetch_links(title):
     try:
         page = w.WikipediaPage(title)
-        return page.links
+        return title, page.links
+    except w.exceptions.DisambiguationError as e:
+        try:
+            first_option_page = w.WikipediaPage(e.options[0])
+            return e.options[0], first_option_page.links
+        except Exception as e:
+            print(f"Error fetching links for disambiguation option")
+            return title, []
     except Exception as e:
-        print(f"Error with page: {title}")
-        return []
+        print(f"Error fetching links for {title}: {e}")
+        return title, []
 
-ACVA_SUBSETS = [
-    "Algeria", "Ancient_Egypt", "Arab_Empire", "Arabic_Architecture", "Arabic_Art", "Arabic_Astronomy",
-    "Arabic_Calligraphy", "Arabic_Ceremony", "Arabic_Clothing", "Arabic_Culture", "Arabic_Food",
-    "Arabic_Funeral", "Arabic_Geography", "Arabic_History", "Arabic_Language_Origin", "Arabic_Literature",
-    "Arabic_Math", "Arabic_Medicine", "Arabic_Music", "Arabic_Ornament", "Arabic_Philosophy",
-    "Arabic_Physics_and_Chemistry", "Arabic_Wedding", "Bahrain", "Comoros", "Egypt_modern",
-    "InfluenceFromAncientEgypt", "InfluenceFromByzantium", "InfluenceFromChina", "InfluenceFromGreece",
-    "InfluenceFromIslam", "InfluenceFromPersia", "InfluenceFromRome", "Iraq", "Islam_Education",
-    "Islam_branches_and_schools", "Islamic_law_system", "Jordan", "Kuwait", "Lebanon", "Libya", "Mauritania",
-    "Mesopotamia_civilization", "Morocco", "Oman", "Palestine", "Qatar", "Saudi_Arabia", "Somalia",
-    "Sudan", "Syria", "Tunisia", "United_Arab_Emirates", "Yemen", "communication", "computer_and_phone",
-    "daily_life", "entertainment"
+# Level 0 titles
+titles_level0 = [
+   'Arab culture'
 ]
-
-# Collect the titles from Wikipedia
-titles_level0 = []
-for subject in ACVA_SUBSETS:
-    titles_level0.extend(w.search(subject, results=10))
-
-# Save the level 0 titles
-save_list_to_file('titles_level0.txt', titles_level0)
-print(f"End of level 0 with {len(titles_level0)} links")
-
-# Fetch level 1 links in parallel
+# Fetch level 1 links using multi-threading with max_workers=10 and tqdm progress bar
 titles_level1 = []
 with ThreadPoolExecutor(max_workers=10) as executor:
-    future_to_title = {executor.submit(fetch_links, title): title for title in titles_level0}
-    for future in as_completed(future_to_title):
-        links = future.result()
-        titles_level1.extend(links)
+    results = list(tqdm(executor.map(fetch_links, titles_level0), total=len(titles_level0), desc="Fetching Level 1 Links"))
 
-# Save the level 1 titles
-save_list_to_file('titles_level1.txt', titles_level1)
+for title, links in results:
+    titles_level1.extend(links)
+
+titles_level1 = list(set(titles_level1))
+
 print(f"End of level 1 with {len(titles_level1)} links")
+save_list_to_file('titles_level1.txt', titles_level1)
 
-# Fetch level 2 links in parallel
+# Filter level 1 and fetch level 2 links using multi-threading with max_workers=10 and tqdm progress bar
+title_level_1_filtered = []
 titles_level2 = []
+
 with ThreadPoolExecutor(max_workers=10) as executor:
-    future_to_title = {executor.submit(fetch_links, title): title for title in titles_level1}
-    for future in as_completed(future_to_title):
-        links = future.result()
+    results = list(tqdm(executor.map(fetch_links, titles_level1), total=len(titles_level1), desc="Fetching Level 2 Links"))
+
+for title, links in results:
+    if links:
+        title_level_1_filtered.append(title)
         titles_level2.extend(links)
 
-# Save the level 2 titles
-save_list_to_file('titles_level2.txt', titles_level2)
+titles_level2 = list(set(titles_level2))
+
+final_list1 = list(set(title_level_1_filtered + titles_level0))
+save_list_to_file('titles_level1_filtered.txt', final_list1)
+
 print(f"End of level 2 with {len(titles_level2)} links")
+save_list_to_file('titles_level2.txt', titles_level2)
+
+# Filter level 2 links using multi-threading with max_workers=10 and tqdm progress bar
+title_level_2_filtered = []
+
+with ThreadPoolExecutor(max_workers=10) as executor:
+    results = list(tqdm(executor.map(fetch_links, titles_level2), total=len(titles_level2), desc="Filtering Level 2 Links"))
+
+for title, links in results:
+    if links:
+        title_level_2_filtered.append(title)
+
+final_list2 = list(set(title_level_2_filtered + final_list1))
+save_list_to_file('titles_level2_filtered.txt', final_list2)
