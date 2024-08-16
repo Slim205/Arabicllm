@@ -28,7 +28,7 @@ def get_correct_option(sample) :
 
 def race(model_name: str, repo_name: str,output_path: str = './race'):
     dataset = load_dataset("ehovy/race","all")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def get_question(sample) : 

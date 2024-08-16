@@ -53,7 +53,7 @@ def get_correct_option(sample) :
 
 def sciq(model_name: str, repo_name: str,output_path: str = './sciq'):
     dataset = load_dataset("allenai/sciq")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     dataset = transform_dataset(dataset)
 

@@ -13,7 +13,7 @@ def get_str(s) :
 def piqa(model_name: str, repo_name: str,output_path: str = './piqa'):
 
     dataset = load_dataset("generate_piqa_data.py")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def get_question(sample) : 

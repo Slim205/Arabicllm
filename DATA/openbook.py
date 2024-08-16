@@ -38,7 +38,7 @@ def get_str(s) :
 def openbook(model_name: str, repo_name: str,output_path: str = './openbook'):
 
     dataset = load_dataset("allenai/openbookqa", "additional")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def get_question(sample) : 

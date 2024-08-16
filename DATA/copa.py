@@ -13,7 +13,7 @@ def get_str(s) :
 def copa(model_name: str, repo_name: str,output_path: str = './copa'):
 
     dataset = load_dataset("stjokerli/TextToText_copa")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def get_question(sample) : 

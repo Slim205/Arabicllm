@@ -20,7 +20,7 @@ Does the following statement incite hatred?
 
 def toxigen(model_name: str, repo_name: str, output_path: str = './toxigen'):
     dataset = load_dataset("toxigen/toxigen-data")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     def get_question(sample) : 

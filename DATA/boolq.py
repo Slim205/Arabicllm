@@ -16,7 +16,7 @@ def get_instruction(question, text):
 def boolq(model_name: str, repo_name: str,output_path: str = './boolq'):
 
     dataset = load_dataset("google/boolq")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 
