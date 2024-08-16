@@ -3,7 +3,6 @@ from vllm import LLM,SamplingParams
 from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
-# add yes/no
 
 def get_query_answer(line):
     text = line["text"]
