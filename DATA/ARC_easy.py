@@ -45,8 +45,8 @@ def arc(model_name: str, repo_name: str,output_path: str = './arc_easy'):
         prompt = f"""
 Please create a more detailed question that incorporates the following options, reflecting a choice between them. Include all options in the question.
 
-Question: {sample['question']}
 Options: {get_options(sample['choices']['text'])}
+Question: {sample['question']}
 
 Generate the question directly, without adding any tags, comments, or references to the input text.
 """
@@ -57,14 +57,14 @@ Generate the question directly, without adding any tags, comments, or references
 
     def get_answer(sample) : 
         prompt = f"""
-Answer the following question with a brief justification (one sentence is sufficient):
+Answer the following question with a brief justification (one sentence). Start your response with "The {get_str(get_index_correct_answer(sample))} option is correct." : 
 
-{sample['ift_instruction']}
-
-(Note: The correct option is {get_correct_option(sample)}.)
+Question : {sample['ift_instruction']}
+Answer : {get_correct_option(sample)}
 
 Respond directly, avoiding any tags, comments, or references to the input text.
 """
+
         messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
@@ -97,38 +97,7 @@ Respond directly, avoiding any tags, comments, or references to the input text.
     for i, item in enumerate(outputs):
         llm_answers.append(item.outputs[0].text)
 
-    dataset = dataset.add_column("ift_answer_intermediate", llm_answers)
-
-
-    def get_rank(sample) : 
-        prompt = f"""
-Combine these two sentences into a complete response, maintaining their distinct meanings and keeping them separate.
-
-The {get_str(get_index_correct_answer(sample))} option is the correct option.
-{sample['ift_answer_intermediate']} 
-
-Please respond concisely, without adding any tags, comments, or references to the input.
-"""
-
-
-        messages = [{"role": "user", "content":prompt}]
-        prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
-        return prompt_with_chat_template
-
-    prompts = []
-
-    for example in dataset:        
-        prompts.append(get_rank(example))
-
-    print(prompts[0])
-    outputs = llm.generate(prompts,sampling_params)
-    llm_answers_rank=[]
-    for i, item in enumerate(outputs):
-        llm_answers_rank.append(item.outputs[0].text)
-
-    dataset = dataset.add_column("ift_answer", llm_answers_rank)
-    dataset = dataset.remove_columns("ift_answer_intermediate")
-
+    dataset = dataset.add_column("ift_answer", llm_answers)
 
     dataset_dict = DatasetDict({"train": dataset})
 

@@ -4,6 +4,25 @@ from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import torch
 
+def get_str(s) :
+    if int(s)==0:
+        return "first"
+    elif  int(s)==1 :
+        return "second"
+    elif int(s) == 2 :
+        return "third"
+    else :
+        return "last"
+
+def get_instruction(question, text):
+    instruction = f"""
+    « {text} »
+
+    {question}
+    """
+    return instruction
+
+
 def hellaswag(model_name: str, repo_name: str,output_path: str = './hellaswag'):
 
     dataset = load_dataset("Rowan/hellaswag")
@@ -14,8 +33,8 @@ def hellaswag(model_name: str, repo_name: str,output_path: str = './hellaswag'):
         prompt = f"""
 Please create a question that incorporates the following context and options, reflecting a choice between the options. Include all options in the question.
 
-Premise: {sample['ctx']}
-Options: {sample['endings']}
+Options: {sample['endings'][0]}, {sample['endings'][1]}, {sample['endings'][2]}, {sample['endings'][3]}
+Context: {sample['ctx']}
 
 Generate the question directly, without adding any tags, comments, or references to the input text.
 """
@@ -29,14 +48,14 @@ Generate the question directly, without adding any tags, comments, or references
         return sample['endings'][index]
     def get_answer(sample) : 
         prompt = f"""
-Answer the following question with a brief justification (one sentence is sufficient):
+Answer the following question with a brief justification (one sentence). Start your response with "The {get_str(sample['label'])} option is correct." : 
 
 {sample['ift_instruction']}
-
-(Note: The correct option is {get_correct_option(sample)}.)
+Answer : {get_correct_option(sample)}
 
 Respond directly, avoiding any tags, comments, or references to the input text.
 """
+
         messages = [{"role": "user", "content":prompt}]
         prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
         return prompt_with_chat_template
@@ -52,7 +71,7 @@ Respond directly, avoiding any tags, comments, or references to the input text.
     outputs = llm.generate(prompts,sampling_params)
     llm_questions=[]
     for i, item in enumerate(outputs):
-        llm_questions.append(item.outputs[0].text)
+        llm_questions.append(get_instruction(item.outputs[0].text, dataset['ctx_a'][i]))
 
     dataset = dataset.add_column("ift_instruction", llm_questions)
 
@@ -69,46 +88,7 @@ Respond directly, avoiding any tags, comments, or references to the input text.
     for i, item in enumerate(outputs):
         llm_answers.append(item.outputs[0].text)
 
-    dataset = dataset.add_column("ift_answer_intermediate", llm_answers)
-
-    def get_str(s) :
-        if int(s)==0:
-            return "first"
-        elif  int(s)==1 :
-            return "second"
-        elif int(s) == 2 :
-            return "third"
-        else :
-            return "last"
-    def get_rank(sample) : 
-        prompt = f"""
-Combine these two sentences into a complete response, maintaining their distinct meanings and keeping them separate.
-
-The {get_str(sample['label'])} option is the correct option.
-{sample['ift_answer_intermediate']} 
-
-Please respond concisely, without adding any tags, comments, or references to the input.
-"""
-
-
-        messages = [{"role": "user", "content":prompt}]
-        prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
-        return prompt_with_chat_template
-
-    prompts = []
-
-    for example in dataset:        
-        prompts.append(get_rank(example))
-
-    print(prompts[0])
-    outputs = llm.generate(prompts,sampling_params)
-    llm_answers_rank=[]
-    for i, item in enumerate(outputs):
-        llm_answers_rank.append(item.outputs[0].text)
-
-    dataset = dataset.add_column("ift_answer", llm_answers_rank)
-    dataset = dataset.remove_columns("ift_answer_intermediate")
-
+    dataset = dataset.add_column("ift_answer", llm_answers)
 
     dataset_dict = DatasetDict({"train": dataset})
 
