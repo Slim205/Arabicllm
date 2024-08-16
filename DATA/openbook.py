@@ -37,7 +37,7 @@ def get_str(s) :
 
 def openbook(model_name: str, repo_name: str,output_path: str = './openbook'):
 
-    dataset = load_dataset("allenai/openbookqa", "main")
+    dataset = load_dataset("allenai/openbookqa", "additional")
     dataset = dataset['train'].select(range(50))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -59,6 +59,7 @@ Generate the question directly, without adding any tags, comments, or references
         prompt = f"""
 Answer the following question with a brief justification (one sentence). Start your response with "The {get_str(get_index_correct_answer(sample))} option is correct." : 
 
+Support : {sample['fact1']}
 Question : {sample['ift_instruction']}
 Answer : {get_correct_option(sample)}
 
