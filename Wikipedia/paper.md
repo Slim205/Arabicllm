@@ -1,7 +1,7 @@
 ### Abstract : 
--Introduce instruction pretraining
--build an open-source model : synthesizer ==> construct 200M questions for 40+ topics
--analyse the instruction synthetizer and the instruction data to understand why they led to the success of their approach.
+- Introduce instruction pretraining
+- build an open-source model : synthesizer ==> construct 200M questions for 40+ topics
+- analyse the instruction synthetizer and the instruction data to understand why they led to the success of their approach.
 
 Vanilla pretraining : pretraining using only raw data
 Intruction pretraining : pretrain on an augmented corpora : augment each raw text with a set of instruction-response pairs 
