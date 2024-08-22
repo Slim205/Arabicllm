@@ -1,0 +1,110 @@
+{
+  "config_general": {
+    "lighteval_sha": "1bcde543f10ace8ab221df11e8989b527674a774",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 2,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 82264.239678514,
+    "end_time": 82586.690422535,
+    "total_evaluation_time_secondes": "322.450744021",
+    "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "model_sha": "e1945c40cd546c78e41f1151f4db032b271faeaa",
+    "model_dtype": "torch.bfloat16",
+    "model_size": "14.96 GB",
+    "config": null
+  },
+  "results": {
+    "helm|boolq|0": {
+      "em": 0.0,
+      "em_stderr": 0.0,
+      "qem": 0.0,
+      "qem_stderr": 0.0,
+      "pem": 0.7651376146788991,
+      "pem_stderr": 0.0074142811374444135,
+      "pqem": 0.7654434250764526,
+      "pqem_stderr": 0.007410933117205324
+    },
+    "all": {
+      "em": 0.0,
+      "em_stderr": 0.0,
+      "qem": 0.0,
+      "qem_stderr": 0.0,
+      "pem": 0.7651376146788991,
+      "pem_stderr": 0.0074142811374444135,
+      "pqem": 0.7654434250764526,
+      "pqem_stderr": 0.007410933117205324
+    }
+  },
+  "versions": {
+    "helm|boolq|0": 0
+  },
+  "config_tasks": {
+    "helm|boolq": {
+      "name": "boolq",
+      "prompt_function": "boolq_helm",
+      "hf_repo": "lighteval/boolq_helm",
+      "hf_subset": "default",
+      "metric": [
+        "exact_match",
+        "quasi_exact_match",
+        "prefix_exact_match",
+        "prefix_quasi_exact_match"
+      ],
+      "hf_avail_splits": [
+        "train",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "validation"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": 5,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "helm",
+        "helm_general"
+      ],
+      "original_num_docs": 3270,
+      "effective_num_docs": 3270,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "helm|boolq|0": {
+      "hashes": {
+        "hash_examples": "9dd85f366dc63af3",
+        "hash_full_prompts": "9dd85f366dc63af3",
+        "hash_input_tokens": "2a2f56c131689e95",
+        "hash_cont_tokens": "bf91732e7f1a2397"
+      },
+      "truncated": 3270,
+      "non_truncated": 0,
+      "padded": 181,
+      "non_padded": 3089,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "db01f008fbecebda",
+      "hash_full_prompts": "db01f008fbecebda",
+      "hash_input_tokens": "d08d9e89532a4465",
+      "hash_cont_tokens": "e4b185f26fc74c83"
+    },
+    "truncated": 3270,
+    "non_truncated": 0,
+    "padded": 181,
+    "non_padded": 3089,
+    "num_truncated_few_shots": 0
+  }
+}

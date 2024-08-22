@@ -1,0 +1,322 @@
+{
+  "config_general": {
+    "lighteval_sha": "ec91be776b11be4cc4d5c279ee69eb3e7427e9d7",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 4,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 1299272.439810939,
+    "end_time": 1301461.279128028,
+    "total_evaluation_time_secondes": "2188.8393170891795",
+    "model_name": "_gpfs_workdir_barkallasl_outputs_wiki_level0",
+    "model_sha": "",
+    "model_dtype": "torch.bfloat16",
+    "model_size": "4.95 GB",
+    "config": null
+  },
+  "results": {
+    "leaderboard|arc:challenge|25": {
+      "acc": 0.5179180887372014,
+      "acc_stderr": 0.014602005585490978,
+      "acc_norm": 0.5452218430034129,
+      "acc_norm_stderr": 0.014551507060836357
+    },
+    "leaderboard|hellaswag|10": {
+      "acc": 0.5299741087432782,
+      "acc_stderr": 0.004980807231136741,
+      "acc_norm": 0.7189802828121888,
+      "acc_norm_stderr": 0.004485784468576678
+    },
+    "leaderboard|truthfulqa:mc|0": {
+      "truthfulqa_mc1": 0.2717258261933905,
+      "truthfulqa_mc1_stderr": 0.015572840452875833,
+      "truthfulqa_mc2": 0.42495598547401825,
+      "truthfulqa_mc2_stderr": 0.014241117860183675
+    },
+    "leaderboard|winogrande|5": {
+      "acc": 0.659037095501184,
+      "acc_stderr": 0.013322681435934795
+    },
+    "leaderboard|gsm8k|5": {
+      "qem": 0.22062168309325247,
+      "qem_stderr": 0.011421957796750152
+    },
+    "all": {
+      "acc": 0.5689764309938878,
+      "acc_stderr": 0.010968498084187504,
+      "acc_norm": 0.6321010629078009,
+      "acc_norm_stderr": 0.009518645764706518,
+      "truthfulqa_mc1": 0.2717258261933905,
+      "truthfulqa_mc1_stderr": 0.015572840452875833,
+      "truthfulqa_mc2": 0.42495598547401825,
+      "truthfulqa_mc2_stderr": 0.014241117860183675,
+      "qem": 0.22062168309325247,
+      "qem_stderr": 0.011421957796750152
+    }
+  },
+  "versions": {
+    "leaderboard|arc:challenge|25": 0,
+    "leaderboard|gsm8k|5": 0,
+    "leaderboard|hellaswag|10": 0,
+    "leaderboard|truthfulqa:mc|0": 0,
+    "leaderboard|winogrande|5": 0
+  },
+  "config_tasks": {
+    "leaderboard|arc:challenge": {
+      "name": "arc:challenge",
+      "prompt_function": "arc",
+      "hf_repo": "ai2_arc",
+      "hf_subset": "ARC-Challenge",
+      "metric": [
+        "loglikelihood_acc",
+        "loglikelihood_acc_norm_nospace"
+      ],
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": "random_sampling_from_train",
+      "generation_size": 1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "leaderboard",
+        "arc"
+      ],
+      "original_num_docs": 1172,
+      "effective_num_docs": 1172,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "leaderboard|gsm8k": {
+      "name": "gsm8k",
+      "prompt_function": "gsm8k",
+      "hf_repo": "gsm8k",
+      "hf_subset": "main",
+      "metric": [
+        "quasi_exact_match_gsm8k"
+      ],
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": "random_sampling_from_train",
+      "generation_size": 256,
+      "stop_sequence": [
+        "Question:",
+        "Question",
+        ":"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "leaderboard"
+      ],
+      "original_num_docs": 1319,
+      "effective_num_docs": 1319,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "leaderboard|hellaswag": {
+      "name": "hellaswag",
+      "prompt_function": "hellaswag_harness",
+      "hf_repo": "hellaswag",
+      "hf_subset": "default",
+      "metric": [
+        "loglikelihood_acc",
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "train",
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "validation"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": "random_sampling_from_train",
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "leaderboard"
+      ],
+      "original_num_docs": 10042,
+      "effective_num_docs": 10042,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "leaderboard|truthfulqa:mc": {
+      "name": "truthfulqa:mc",
+      "prompt_function": "truthful_qa_multiple_choice",
+      "hf_repo": "truthful_qa",
+      "hf_subset": "multiple_choice",
+      "metric": [
+        "truthfulqa_mc_metrics"
+      ],
+      "hf_avail_splits": [
+        "validation"
+      ],
+      "evaluation_splits": [
+        "validation"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "leaderboard"
+      ],
+      "original_num_docs": 817,
+      "effective_num_docs": 817,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "leaderboard|winogrande": {
+      "name": "winogrande",
+      "prompt_function": "winogrande",
+      "hf_repo": "winogrande",
+      "hf_subset": "winogrande_xl",
+      "metric": [
+        "loglikelihood_acc"
+      ],
+      "hf_avail_splits": [
+        "train",
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "validation"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": "random_sampling",
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "leaderboard"
+      ],
+      "original_num_docs": 1267,
+      "effective_num_docs": 1267,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "leaderboard|arc:challenge|25": {
+      "hashes": {
+        "hash_examples": "17b0cae357c0259e",
+        "hash_full_prompts": "045cbb916e5145c6",
+        "hash_input_tokens": "e87e3d0d66ed9115",
+        "hash_cont_tokens": "6601f67ce1cc0153"
+      },
+      "truncated": 0,
+      "non_truncated": 1172,
+      "padded": 4669,
+      "non_padded": 18,
+      "effective_few_shots": 25.0,
+      "num_truncated_few_shots": 0
+    },
+    "leaderboard|hellaswag|10": {
+      "hashes": {
+        "hash_examples": "31985c805c3a737e",
+        "hash_full_prompts": "fb29e0ca629fe078",
+        "hash_input_tokens": "234b5dd31cdc4a17",
+        "hash_cont_tokens": "76b60a2eeb7baa16"
+      },
+      "truncated": 0,
+      "non_truncated": 10042,
+      "padded": 40040,
+      "non_padded": 128,
+      "effective_few_shots": 10.0,
+      "num_truncated_few_shots": 0
+    },
+    "leaderboard|truthfulqa:mc|0": {
+      "hashes": {
+        "hash_examples": "36a6d90e75d92d4a",
+        "hash_full_prompts": "36a6d90e75d92d4a",
+        "hash_input_tokens": "153e8ecfec20c3f2",
+        "hash_cont_tokens": "01c5cfbce3444605"
+      },
+      "truncated": 0,
+      "non_truncated": 817,
+      "padded": 9996,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "leaderboard|winogrande|5": {
+      "hashes": {
+        "hash_examples": "087d5d1a1afd4c7b",
+        "hash_full_prompts": "e0bb3cac43f294b2",
+        "hash_input_tokens": "459fb4059a0ad9e3",
+        "hash_cont_tokens": "0ed299ff0ae4fe34"
+      },
+      "truncated": 0,
+      "non_truncated": 1267,
+      "padded": 2534,
+      "non_padded": 0,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    },
+    "leaderboard|gsm8k|5": {
+      "hashes": {
+        "hash_examples": "0ed016e24e7512fd",
+        "hash_full_prompts": "41d55e83abc0e02d",
+        "hash_input_tokens": "64685f1dcb9f8eb7",
+        "hash_cont_tokens": "0311ab2e6eba2027"
+      },
+      "truncated": 1319,
+      "non_truncated": 0,
+      "padded": 591,
+      "non_padded": 728,
+      "effective_few_shots": 5.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "1e2528a6610fcf49",
+      "hash_full_prompts": "f3612958c4e3eb55",
+      "hash_input_tokens": "cff2f08a318932fe",
+      "hash_cont_tokens": "219269e85508bff8"
+    },
+    "truncated": 1319,
+    "non_truncated": 13298,
+    "padded": 57830,
+    "non_padded": 874,
+    "num_truncated_few_shots": 0
+  }
+}

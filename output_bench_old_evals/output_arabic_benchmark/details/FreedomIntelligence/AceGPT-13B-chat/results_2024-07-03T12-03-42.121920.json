@@ -1,0 +1,200 @@
+{
+  "config_general": {
+    "lighteval_sha": "2c6fcd34da05fa752b6107ecd4c20a0de41a02ba",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 16,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 176869.809910936,
+    "end_time": 177468.628319647,
+    "total_evaluation_time_secondes": "598.8184087109985",
+    "model_name": "FreedomIntelligence/AceGPT-13B-chat",
+    "model_sha": "ab87ccbc2c4a05969957755aaabc04400bb20052",
+    "model_dtype": "torch.float16",
+    "model_size": "24.24 GB",
+    "config": null
+  },
+  "results": {
+    "community|arabic_mmlu:abstract_algebra|0": {
+      "acc_norm": 0.21,
+      "acc_norm_stderr": 0.040936018074033256
+    },
+    "community|arabic_mmlu:anatomy|0": {
+      "acc_norm": 0.28888888888888886,
+      "acc_norm_stderr": 0.0391545063041425
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "acc": 0.684976836532098,
+      "acc_stderr": 0.011954205387840925
+    },
+    "community|arabic_mmlu:_average|0": {
+      "acc_norm": 0.2494444444444444,
+      "acc_norm_stderr": 0.04004526218908788
+    },
+    "all": {
+      "acc_norm": 0.2494444444444444,
+      "acc_norm_stderr": 0.04004526218908788,
+      "acc": 0.684976836532098,
+      "acc_stderr": 0.011954205387840925
+    }
+  },
+  "versions": {
+    "community|arabic_mmlu:abstract_algebra|0": 0,
+    "community|arabic_mmlu:anatomy|0": 0,
+    "lighteval|xstory_cloze:ar|0": 0
+  },
+  "config_tasks": {
+    "community|arabic_mmlu:abstract_algebra": {
+      "name": "arabic_mmlu:abstract_algebra",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "abstract_algebra",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 100,
+      "effective_num_docs": 100,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|arabic_mmlu:anatomy": {
+      "name": "arabic_mmlu:anatomy",
+      "prompt_function": "mmlu_arabic",
+      "hf_repo": "OALL/Arabic_MMLU",
+      "hf_subset": "anatomy",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "dev"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "dev",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 135,
+      "effective_num_docs": 135,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "lighteval|xstory_cloze:ar": {
+      "name": "xstory_cloze:ar",
+      "prompt_function": "storycloze",
+      "hf_repo": "juletxara/xstory_cloze",
+      "hf_subset": "ar",
+      "metric": [
+        "loglikelihood_acc"
+      ],
+      "hf_avail_splits": [
+        "training",
+        "eval"
+      ],
+      "evaluation_splits": [
+        "eval"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "stop_sequence": [
+        "\n"
+      ],
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "lighteval"
+      ],
+      "original_num_docs": 1511,
+      "effective_num_docs": 1511,
+      "trust_dataset": true,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|arabic_mmlu:abstract_algebra|0": {
+      "hashes": {
+        "hash_examples": "f2ddca8f45c0a511",
+        "hash_full_prompts": "f2ddca8f45c0a511",
+        "hash_input_tokens": "a7976dbc4ad91a22",
+        "hash_cont_tokens": "7bc7488c2a956f2f"
+      },
+      "truncated": 0,
+      "non_truncated": 100,
+      "padded": 400,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|arabic_mmlu:anatomy|0": {
+      "hashes": {
+        "hash_examples": "dfdbc1b83107668d",
+        "hash_full_prompts": "dfdbc1b83107668d",
+        "hash_input_tokens": "e13ae1a27f9272c5",
+        "hash_cont_tokens": "98af216f8a4d70c7"
+      },
+      "truncated": 0,
+      "non_truncated": 135,
+      "padded": 536,
+      "non_padded": 4,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "lighteval|xstory_cloze:ar|0": {
+      "hashes": {
+        "hash_examples": "865426a22c787481",
+        "hash_full_prompts": "865426a22c787481",
+        "hash_input_tokens": "3767492da2b81503",
+        "hash_cont_tokens": "3bdc99d3b87c4f9a"
+      },
+      "truncated": 0,
+      "non_truncated": 1511,
+      "padded": 2971,
+      "non_padded": 51,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "3bb897f6f28d46a2",
+      "hash_full_prompts": "3bb897f6f28d46a2",
+      "hash_input_tokens": "2de57bd655fa4b13",
+      "hash_cont_tokens": "9cfe430d2533d9a4"
+    },
+    "truncated": 0,
+    "non_truncated": 1746,
+    "padded": 3907,
+    "non_padded": 55,
+    "num_truncated_few_shots": 0
+  }
+}
