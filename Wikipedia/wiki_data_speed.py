@@ -1,68 +1,87 @@
 from vllm import LLM, SamplingParams
-from datasets import DatasetDict, Dataset
+from datasets import load_dataset, DatasetDict, Dataset
 from transformers import AutoTokenizer
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 import wikipediaapi
 import fire
 
+# Functions load_list_from_file, store_title, get_list_titles, get_question, get_answer remain unchanged
 def load_list_from_file(filename):
     with open(filename, 'r') as f:
         data_list = [line.strip() for line in f]
     return data_list
 
-def store_title(section, current_list_titles):
-    if len(section.sections) == 0:
+def store_title(section,current_list_titles) : 
+    if len(section.sections) == 0 : 
         current_list_titles.append(section.title)
-    else:
-        for s in section.sections:
-            store_title(s, current_list_titles)
+    else : 
+        for s in section.sections : 
+            store_title(s,current_list_titles)
     return current_list_titles
 
-def get_list_titles(page):
+def get_list_titles(page) :
     l = []
-    for section in page.sections:
-        l = store_title(section, l)
-    return l
+    for section in page.sections : 
+        l = store_title(section,l)
+   # pos = l.index('See also')
+    #l = l[:pos]
+    return l 
 
-def get_question(text, tokenizer):
+def get_question(text,tokenizer) : 
     prompt = f"""
-Read the text below and create a question in Arabic whose answer is the entire text.
+Read the text below and create a question whose answer is the entire text. Don't start your question with "What".
 
 {text}
 
 Provide only the question, without any tags, comments, or references to the input text.
 """
-    messages = [{"role": "user", "content": prompt}]
-    return tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
 
-def get_answer(text, question, tokenizer):
+    messages = [{"role": "user", "content":prompt}]
+    prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
+    return prompt_with_chat_template
+
+#Provide a detailed answer to the following question based on the provided text. 
+
+def get_answer(text,question,tokenizer) : 
     prompt = f"""
-Answer to the following question in Arabic based on the provided text.
+Answer to the following question based on the provided text. Don't answer in a single paragraph. 
 
 Text: {text}
 Question : {question}
 
 Respond directly, avoiding any tags, comments, or references to the input text.
 """
-    messages = [{"role": "user", "content": prompt}]
-    return tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
+    messages = [{"role": "user", "content":prompt}]
+    prompt_with_chat_template= tokenizer.apply_chat_template(messages, add_generation_prompt=True,  tokenize=False)
+    return prompt_with_chat_template
 
-def process_title(title, wiki_wiki, tokenizer):
-    results = []
+
+def process_title(title, wiki_wiki, tokenizer, llm):
     page = wiki_wiki.page(title)
-    if 'ar' in page.langlinks:
-        page = page.langlinks['ar']
-        l = get_list_titles(page)
-        list_text = [page.section_by_title(title).text for title in l if len(page.section_by_title(title).text) > 100]
-        for text in list_text:
-            question_prompt = get_question(text, tokenizer)
-            results.append((text, page.fullurl, page.title, question_prompt))
+    l = get_list_titles(page)
+    l = list(set(l))
+    list_text = []
+
+    for title in l:
+        if title not in ['See also', 'References', 'External links']:
+            text_title = page.section_by_title(title).text
+            if len(text_title) > 100:
+                list_text.append(text_title)
+
+    results = []
+    for text in list_text:
+        question_prompt = get_question(text, tokenizer)
+        results.append((text, page.fullurl, page.title, question_prompt))
+
     return results
+
+def generate_outputs(prompts, llm, sampling_params):
+    return llm.generate(prompts, sampling_params)
 
 def wiki(model_name: str, repo_name: str):
     titles = load_list_from_file('wiki_list_level1.txt')
-    titles = titles[:2000]
+    titles = titles[:1200]
     titles0 = [
     'Algeria', 'Ancient Egypt', 'Caliphate', 'Islamic architecture', 'Islamic art',
     'Astronomy in the medieval Islamic world', 'Arabic calligraphy', 'Arab culture',
@@ -75,14 +94,22 @@ def wiki(model_name: str, repo_name: str):
     'Morocco', 'Oman', 'State of Palestine', 'Qatar', 'Saudi Arabia', 'Somalia', 'Sudan',
     'Syria', 'Tunisia', 'United Arab Emirates', 'Yemen']
     titles = titles0 + titles
-
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    llm = LLM(model_name, max_model_len=4096, tensor_parallel_size=2, gpu_memory_utilization=0.8)
 
-    list_passages, list_titles, list_links, prompts = [], [], [], []
+    if model_name == "google/gemma-2-27b-it":
+        llm = LLM(model_name, max_model_len=4096, tensor_parallel_size=4, gpu_memory_utilization=0.8)
+    elif model_name == "meta-llama/Meta-Llama-3.1-70B-Instruct":
+        llm = LLM(model_name, max_model_len=816, tensor_parallel_size=4, gpu_memory_utilization=0.95)
+    else:
+        llm = LLM(model_name, max_model_len=4096)
+
+    list_passages = []
+    list_titles = []
+    list_links = []
+    prompts = []
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(process_title, title, wiki_wiki, tokenizer) for title in titles]
+        futures = [executor.submit(process_title, title, wiki_wiki, tokenizer, llm) for title in titles]
         for future in tqdm(as_completed(futures), total=len(futures)):
             results = future.result()
             for text, link, title, question_prompt in results:
@@ -92,9 +119,13 @@ def wiki(model_name: str, repo_name: str):
                 prompts.append(question_prompt)
 
     sampling_params = SamplingParams(max_tokens=512, temperature=0.8, top_p=0.95)
-    outputs = llm.generate(prompts, sampling_params)
+    outputs = generate_outputs(prompts, llm, sampling_params)
 
-    llm_questions, llm_answers, llm_passage, llm_titles, llm_links = [], [], [], [], []
+    llm_questions = []
+    llm_answers = []
+    llm_passage = []
+    llm_titles = []
+    llm_links = []
 
     for i, item in enumerate(outputs):
         output = item.outputs[0].text
@@ -104,7 +135,7 @@ def wiki(model_name: str, repo_name: str):
         llm_links.append(list_links[i])
 
     answer_prompts = [get_answer(llm_passage[i], llm_questions[i], tokenizer) for i in range(len(llm_questions))]
-    outputs = llm.generate(answer_prompts, sampling_params)
+    outputs = generate_outputs(answer_prompts, llm, sampling_params)
 
     for i, item in enumerate(outputs):
         output = item.outputs[0].text

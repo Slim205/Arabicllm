@@ -29,7 +29,7 @@ def get_list_titles(page) :
 
 def get_question(text,tokenizer) : 
     prompt = f"""
-Read the text below and create a question whose answer is the entire text.
+Read the text below and create a question whose answer is the entire text. Don't start your question with "What".
 
 {text}
 
@@ -44,7 +44,7 @@ Provide only the question, without any tags, comments, or references to the inpu
 
 def get_answer(text,question,tokenizer) : 
     prompt = f"""
-Answer to the following question based on the provided text. 
+Answer to the following question based on the provided text. Don't answer in a single paragraph. 
 
 Text: {text}
 Question : {question}
@@ -57,9 +57,9 @@ Respond directly, avoiding any tags, comments, or references to the input text.
 
 
 def wiki( model_name : str,repo_name : str):
-    #titles = load_list_from_file('wikipedia_links_list.txt')
-   # titles = titles[:50]
-    titles = [
+    titles = load_list_from_file('wiki_list_level1.txt')
+    titles = titles[:1000]
+    titles0 = [
     'Algeria', 'Ancient Egypt', 'Caliphate', 'Islamic architecture', 'Islamic art',
     'Astronomy in the medieval Islamic world', 'Arabic calligraphy', 'Arab culture',
     'Arabs', 'Arab cuisine', 'Islamic funeral', 'Geography of the Arab world',
@@ -75,7 +75,10 @@ def wiki( model_name : str,repo_name : str):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     print(titles[0])
     if model_name == "google/gemma-2-27b-it" :
-        llm = LLM(model_name,max_model_len=4096, tensor_parallel_size=2,gpu_memory_utilization=0.8)
+        llm = LLM(model_name,max_model_len=4096, tensor_parallel_size=4,gpu_memory_utilization=0.8)
+    elif model_name == "meta-llama/Meta-Llama-3.1-70B-Instruct" :
+        llm = LLM(model_name,max_model_len=816, tensor_parallel_size=4,gpu_memory_utilization=0.95)
+
     else :
         llm = LLM(model_name,max_model_len=4096) 
     list_passages = []
@@ -86,11 +89,13 @@ def wiki( model_name : str,repo_name : str):
     for title in titles :
         page = wiki_wiki.page(title)
         l = get_list_titles(page)
+        l = list(set(l))
         list_text = []
         for title in l : 
-            text_title = page.section_by_title(title).text
-            if len(text_title) > 100 : 
-                list_text.append(text_title)
+            if title not in ['See also', 'References', 'External links'] :
+                text_title = page.section_by_title(title).text
+                if len(text_title) > 100 : 
+                    list_text.append(text_title)
       #  list_text.sort(key=lambda x: len(x), reverse=True)
         for text in list_text: #[:10] :
             prompt.append(get_question(text,tokenizer))

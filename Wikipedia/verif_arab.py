@@ -3,6 +3,8 @@ from vllm import LLM,SamplingParams
 from datasets import load_dataset, DatasetDict,Dataset
 from transformers import AutoTokenizer
 import wikipedia as w 
+from concurrent.futures import ThreadPoolExecutor
+from tqdm import tqdm
 
 def load_list_from_file(filename):
     with open(filename, 'r') as f:
@@ -14,8 +16,6 @@ def save_list_to_file(filename, data_list):
         for item in data_list:
             f.write("%s\n" % item)
 
-from concurrent.futures import ThreadPoolExecutor
-from tqdm import tqdm
 
 
 def verif_arab():
