@@ -23,7 +23,7 @@ Respond directly, avoiding any tags, comments, or references to the original tex
 def math(model_name: str, repo_name: str,output_path: str = './gsm8k'):
 
     dataset = load_dataset("openai/gsm8k",'main')
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     if model_name == "google/gemma-2-27b-it" :
         llm = LLM(model_name,max_model_len=4096, tensor_parallel_size=2,gpu_memory_utilization=0.85)
@@ -43,16 +43,19 @@ def math(model_name: str, repo_name: str,output_path: str = './gsm8k'):
     print(prompts[0])
     outputs = llm.generate(prompts,sampling_params)
     llm_answers=[]
+    llm_questions=[]
     for i, item in enumerate(outputs):
         llm_answers.append(item.outputs[0].text)
+        llm_questions.append(dataset['question'][i])
 
-    dataset = dataset.add_column("llm_answers", llm_answers)
+    dataset = dataset.add_column("ift_instruction", llm_questions)
+    dataset = dataset.add_column("ift_answer", llm_answers)
 
 
     dataset_dict = DatasetDict({"train": dataset})
 
-   # dataset_dict.save_to_disk(output_path)
-   # print(f"Translated dataset saved to {output_path}")
+    dataset_dict.save_to_disk(output_path)
+    print(f"Translated dataset saved to {output_path}")
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")

@@ -2,7 +2,7 @@ from datasets import load_dataset
 import re
 
 # Load the dataset
-ref = "Slim205/translated-gsm8k-version2"
+ref = "Slim205/wiki_translated_gemma"
 dataset = load_dataset(ref)
 
 def add_id_column(example, idx):
@@ -20,7 +20,7 @@ def add_id_column(example, idx):
     return example
 
 # Add an 'id' column to each split
-dataset_with_id = dataset.map(add_id_column, with_indices=True)
+#dataset_with_id = dataset.map(add_id_column, with_indices=True)
 
 def contains_english(text):
     """
@@ -110,14 +110,14 @@ def filter_all_conditions(sample):
     return (
         not (contains_english(sample['answer']) or contains_english(sample['question'])) and
         not (contains_japanese(sample['answer']) or contains_japanese(sample['question'])) and
-        not (contains_hebrew(sample['answer']) or contains_hebrew(sample['question'])) and
-        ends_with_question_mark(sample['question']) and
-        is_length_less_than_663(sample['question']) and
-        is_length_less_than_592(sample['answer'])
+        not (contains_hebrew(sample['answer']) or contains_hebrew(sample['question'])) 
+       # ends_with_question_mark(sample['question']) and
+       # is_length_less_than_663(sample['question']) and
+       # is_length_less_than_592(sample['answer'])
     )
 
 # Apply all filters in a single pass
-dataset_filtered = dataset_with_id.filter(filter_all_conditions)
+dataset_filtered = dataset.filter(filter_all_conditions)
 
 # Push the final filtered dataset to the hub
-dataset_filtered.push_to_hub("Slim205/filtered-gsm8k_version8")
+dataset_filtered.push_to_hub("Slim205/filtered-wiki-translated-gemma")

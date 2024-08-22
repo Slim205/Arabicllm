@@ -66,7 +66,7 @@ def process_title(title, wiki_wiki, tokenizer, llm):
     for title in l:
         if title not in ['See also', 'References', 'External links']:
             text_title = page.section_by_title(title).text
-            if len(text_title) > 100:
+            if len(text_title) > 100 and len(text_title) < 2204 : 
                 list_text.append(text_title)
 
     results = []
@@ -81,7 +81,7 @@ def generate_outputs(prompts, llm, sampling_params):
 
 def wiki(model_name: str, repo_name: str):
     titles = load_list_from_file('wiki_list_level1.txt')
-    titles = titles[:1200]
+   # titles = titles[:1200]
     titles0 = [
     'Algeria', 'Ancient Egypt', 'Caliphate', 'Islamic architecture', 'Islamic art',
     'Astronomy in the medieval Islamic world', 'Arabic calligraphy', 'Arab culture',
@@ -144,6 +144,7 @@ def wiki(model_name: str, repo_name: str):
     data = {"title": llm_titles, "passage": llm_passage, "question": llm_questions, "answer": llm_answers, 'link': llm_links}
     dataset = Dataset.from_dict(data)
     dataset_dict = DatasetDict({"train": dataset})
+    dataset_dict = dataset_dict.shuffle(seed=42)
 
     dataset_dict.push_to_hub(repo_name)
     print(f"Translated dataset saved and pushed to Hugging Face repo: {repo_name}")
