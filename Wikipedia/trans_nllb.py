@@ -12,8 +12,9 @@ def translate_batch(text_list):
     translated_tokens = model.generate(**inputs, 
                                        forced_bos_token_id=tokenizer.convert_tokens_to_ids("arb_Arab"), 
                                        max_length=512, 
-                                       temperature=0.8, 
-                                       top_p=0.95)
+                                        num_beams=5,
+                                        early_stopping=True
+                                    )
     return [tokenizer.decode(t, skip_special_tokens=True) for t in translated_tokens]
 
 def translate_sample_batch(samples):
@@ -31,8 +32,8 @@ def translate_sample_batch(samples):
     }
 
 dataset = load_dataset("Slim205/wiki_data_more_2_filtered")
-subset = dataset['train']
+subset = dataset['train'].select(range(50))
 
-translated_dataset = subset.map(translate_sample_batch, batched=True, batch_size=64)
+translated_dataset = subset.map(translate_sample_batch, batched=True, batch_size=2)
 
 translated_dataset.push_to_hub('Slim205/translated_wikipedia_10k_test2')
