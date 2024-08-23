@@ -38,7 +38,7 @@ Respond directly, avoiding any tags, comments, or references to the input text.
 def wiki(model_name: str, repo_name: str,output_path: str = './wiki_multi'):
 
     dataset = load_dataset("Slim205/top20_wiki_data")
-    dataset = dataset['train'].select(range(50))
+    dataset = dataset['train']
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     if model_name == "google/gemma-2-27b-it" :
