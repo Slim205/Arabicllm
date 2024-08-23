@@ -15,7 +15,7 @@ Generate your response without including any tags, comments, or references to th
     message = client.messages.create(
         model="claude-3-5-sonnet-20240620",
         max_tokens=1000,
-        system="You are an assistant who translate English texts into Arabic.",
+        system="You are an assistant who translates English texts into Arabic.",
         messages=[
             {
                 "role": "user",
