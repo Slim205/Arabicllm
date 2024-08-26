@@ -1,0 +1,62 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "wiki_data_full",
+  "dataset_size": 161710022,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/wiki_data_full@3c8a8d66f2c78f5b3621807d3104d5ec3b7c5563/data/train-00000-of-00001.parquet": {
+      "num_bytes": 102487348,
+      "checksum": null
+    }
+  },
+  "download_size": 102487348,
+  "features": {
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "passage": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "link": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 264197370,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 161710022,
+      "num_examples": 102062,
+      "dataset_name": "wiki_data_full"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
