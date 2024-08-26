@@ -1,0 +1,69 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "piqa_ift",
+  "dataset_size": 11892316,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/piqa_ift@2fe15d2e8735a9e95ca5e4783ca2ad798ab0a2ca/data/train-00000-of-00001.parquet": {
+      "num_bytes": 6786260,
+      "checksum": null
+    }
+  },
+  "download_size": 6786260,
+  "features": {
+    "goal": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sol1": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sol2": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "0",
+        "1"
+      ],
+      "_type": "ClassLabel"
+    },
+    "ift_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 18678576,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 11892316,
+      "num_examples": 16084,
+      "dataset_name": "piqa_ift"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

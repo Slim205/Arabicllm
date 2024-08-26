@@ -1,0 +1,58 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "gsm8k_ift",
+  "dataset_size": 8574409,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/gsm8k_ift@f0f4cd2c8f80a373469bf904a56acef479264597/data/train-00000-of-00001.parquet": {
+      "num_bytes": 4764701,
+      "checksum": null
+    }
+  },
+  "download_size": 4764701,
+  "features": {
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 13339110,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 8574409,
+      "num_examples": 7453,
+      "dataset_name": "gsm8k_ift"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

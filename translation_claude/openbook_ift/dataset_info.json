@@ -1,0 +1,91 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "openbook_ift",
+  "dataset_size": 3793780,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/openbook_ift@bba50b643b79840208d07f03709505c66978d030/data/train-00000-of-00001.parquet": {
+      "num_bytes": 2067195,
+      "checksum": null
+    }
+  },
+  "download_size": 2067195,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question_stem": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "choices": {
+      "feature": {
+        "text": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "label": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "Sequence"
+    },
+    "answerKey": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "fact1": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "humanScore": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "clarity": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "turkIdAnonymized": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 5860975,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 3793780,
+      "num_examples": 4955,
+      "dataset_name": "openbook_ift"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
