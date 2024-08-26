@@ -83,7 +83,7 @@ def translate_sample(sample,data_repo_name):
     return sample
 
 def main(top_10 : bool):
-    list_repo_name = ["Slim205/wiki_data_full_filtered", "Slim205/wiki_multi_full", "Slim205/boolq_ift", "Slim205/race_ift",
+    list_repo_name = ["Slim205/wiki_data_full_filtered", "Slim205/wiki_multi_full_filtered", "Slim205/boolq_ift", "Slim205/race_ift",
                   "Slim205/copa_ift", "Slim205/hellaswag_ift", "Slim205/sciq_ift", "Slim205/toxigen_ift",
                   "Slim205/arc_challenge_ift", "Slim205/arc_easy_ift", "Slim205/openbook_ift", "Slim205/piqa_ift",
                   "Slim205/gsm8k_ift"]
@@ -98,7 +98,7 @@ def main(top_10 : bool):
         print(f"Translated dataset saved to {output_path}")
         
         #Define your hugging face repo : 
-        translated_dataset.push_to_hub(data_repo_name+'_translated_4')
+        translated_dataset.push_to_hub(data_repo_name+'_translated')
         print(f"Translated dataset saved and pushed to Hugging Face repo: {data_repo_name}_translated" )
 
 if __name__ == '__main__':
