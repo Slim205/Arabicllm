@@ -62,7 +62,7 @@ def main(top_10 : bool):
         dataset = load_dataset(data_repo_name)
         print(data_repo_name)
         if top_10 : 
-            dataset = dataset['train'].select(range(1))
+            dataset = dataset['train'].select(range(10))
         translated_dataset = dataset.map(translate_sample,fn_kwargs={'data_repo_name': data_repo_name})
         output_path = data_repo_name[8:]
         translated_dataset.save_to_disk(output_path)
