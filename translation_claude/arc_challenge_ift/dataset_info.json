@@ -1,0 +1,75 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "arc_challenge_ift",
+  "dataset_size": 804475,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/arc_challenge_ift@6d472d468e3e1b79e9cb382ae8d1c1162abc5f04/data/train-00000-of-00001.parquet": {
+      "num_bytes": 435684,
+      "checksum": null
+    }
+  },
+  "download_size": 435684,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "choices": {
+      "feature": {
+        "text": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "label": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "Sequence"
+    },
+    "answerKey": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1240159,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 804475,
+      "num_examples": 1042,
+      "dataset_name": "arc_challenge_ift"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

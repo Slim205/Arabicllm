@@ -55,7 +55,7 @@ def translate_sample(sample,data_repo_name):
 def main(top_10 : bool):
     list_repo_name = ["Slim205/wiki_data_full_filtered", "Slim205/wiki_multi_full", "Slim205/boolq_ift", "Slim205/race_ift",
                   "Slim205/copa_ift", "Slim205/hellaswag_ift", "Slim205/sciq_ift", "Slim205/toxigen_ift",
-                  "Slim205/arc_challenge_ift", "Slim205/arc_easy_ift", "Slim205/openbook_qa_ift", "Slim205/piqa_ift",
+                  "Slim205/arc_challenge_ift", "Slim205/arc_easy_ift", "Slim205/openbook_ift", "Slim205/piqa_ift",
                   "Slim205/gsm8k_ift"]
 
     for data_repo_name in list_repo_name : 

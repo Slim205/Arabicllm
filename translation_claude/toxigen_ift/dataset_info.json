@@ -1,0 +1,102 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "toxigen_ift",
+  "dataset_size": 5903535,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Slim205/toxigen_ift@578bb9e2bc5de12a574643bebbdb06a8eb74d019/data/train-00000-of-00001.parquet": {
+      "num_bytes": 1887926,
+      "checksum": null
+    }
+  },
+  "download_size": 1887926,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "target_group": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "factual?": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ingroup_effect": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "lewd": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "framing": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "predicted_group": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "stereotyping": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "intent": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "toxicity_ai": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "toxicity_human": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "predicted_author": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "actual_method": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ift_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "translated_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 7791461,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5903535,
+      "num_examples": 8960,
+      "dataset_name": "toxigen_ift"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
