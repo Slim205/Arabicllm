@@ -4,8 +4,8 @@ import fire
 def create_conversation(example):
     return {
         "conversations": [
-            {"from": "human", "value": example['question']},
-            {"from": "gpt", "value": example['answer']}
+            {"from": "human", "value": example['translated_question']},
+            {"from": "gpt", "value": example['translated_answer']}
         ]
     }
 

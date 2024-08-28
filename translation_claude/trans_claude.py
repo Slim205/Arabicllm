@@ -34,7 +34,7 @@ Please follow these instructions carefully:
 
 4. Present your translation inside <translation> tags.
 
-5. If you encounter any culturally specific terms or idioms that don't have a direct Arabic equivalent, provide the best approximation and include a brief explanation in parentheses after the term.
+5. If you encounter any culturally specific terms or idioms that don't have a direct Arabic equivalent, provide the best approximation.
 
 6. Maintain the original punctuation style as much as possible in the Arabic translation.
 
