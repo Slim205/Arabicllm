@@ -1,9 +1,9 @@
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from datasets import load_dataset, DatasetDict,Dataset
+from datasets import load_dataset, DatasetDict,Dataset,load_from_disk
 import fire
 
-def main(data_repo_name : str, batch_size : int = 4 ,start:int=0, end:int= 100000000) :
+def main(data_repo_name : str, batch_size : int = 4 ,start:int=0, end:int= 100000000, top : bool = False) :
     model_name = "facebook/nllb-200-3.3B" #"facebook/nllb-200-distilled-600M"
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, attn_implementation="flash_attention_2").to("cuda").eval()
   #  model = torch.compile(model)
@@ -36,8 +36,12 @@ def main(data_repo_name : str, batch_size : int = 4 ,start:int=0, end:int= 10000
         elif data_repo_name == "Slim205/wiki_data_full_filtered" :
             sample['translated_question'] = translate_text(sample['question'])
             sample['translated_answer'] = translate_text(sample['answer'])
+        elif top : 
+            sample['translated_question'] = translate_text(sample['question'])
+            sample['translated_answer'] = translate_text(sample['answer'])
+
         else :
-            sample['translated_instruction'] = translate_text(sample['ift_instruction'])
+            sample['translated_instruction'] = translate_text(sample['statement'])
             sample['translated_answer'] = translate_text(sample['ift_answer'])
 
         return sample
@@ -47,10 +51,15 @@ def main(data_repo_name : str, batch_size : int = 4 ,start:int=0, end:int= 10000
                   "Slim205/openbook_ift", "Slim205/piqa_ift",  "Slim205/gsm8k_ift",
                 "Slim205/wiki_multi_full_filtered"]
 
-    dataset = load_dataset(data_repo_name)
-    dataset = dataset['train'].select(range(start,min(end,len(dataset['train']))))
+    if data_repo_name == 'Slim205/mmlu_ift_256' : 
+        dataset = load_dataset(data_repo_name)['auxiliary_train']
+    else :
+        dataset = load_dataset(data_repo_name)['train']
+
+   # dataset = load_from_disk(data_repo_name)
+    dataset = dataset.select(range(start,min(end,len(dataset))))
     translated_dataset = dataset.map(translate_sample_batch, batched=True, batch_size=batch_size,fn_kwargs={'data_repo_name': data_repo_name})
-    output_path = data_repo_name[8:]
+    output_path = data_repo_name[8:]+ '_translated_nllb'+str(start)
     translated_dataset.save_to_disk(output_path)
     print(f"Translated dataset saved to {output_path}")
 
