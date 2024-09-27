@@ -1,0 +1,3 @@
+community|race_ar|0|1
+community|hellaswag_okapi_ar|0|1
+community|boolq_ar|0|1

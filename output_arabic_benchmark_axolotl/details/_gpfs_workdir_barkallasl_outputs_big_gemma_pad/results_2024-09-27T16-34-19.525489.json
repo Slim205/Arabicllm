@@ -1,0 +1,496 @@
+{
+  "config_general": {
+    "lighteval_sha": "76aac4b0335f18606fb7f869b1419c1f6ab79aa1",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 2,
+    "max_samples": null,
+    "job_id": "",
+    "start_time": 3981.181786008,
+    "end_time": 5098.002542844,
+    "total_evaluation_time_secondes": "1116.8207568360003",
+    "model_name": "_gpfs_workdir_barkallasl_outputs_big_gemma_pad",
+    "model_sha": "",
+    "model_dtype": "torch.bfloat16",
+    "model_size": "18.02 GB",
+    "config": null
+  },
+  "results": {
+    "community|alghafa:mcq_exams_test_ar|0": {
+      "acc_norm": 0.40574506283662476,
+      "acc_norm_stderr": 0.020824550001629694
+    },
+    "community|alghafa:meta_ar_dialects|0": {
+      "acc_norm": 0.44819277108433736,
+      "acc_norm_stderr": 0.006771278016411926
+    },
+    "community|alghafa:meta_ar_msa|0": {
+      "acc_norm": 0.5452513966480447,
+      "acc_norm_stderr": 0.016653875777524
+    },
+    "community|alghafa:multiple_choice_facts_truefalse_balanced_task|0": {
+      "acc_norm": 0.56,
+      "acc_norm_stderr": 0.05770381035711357
+    },
+    "community|alghafa:multiple_choice_grounded_statement_soqal_task|0": {
+      "acc_norm": 0.6466666666666666,
+      "acc_norm_stderr": 0.03915970474562285
+    },
+    "community|alghafa:multiple_choice_grounded_statement_xglue_mlqa_task|0": {
+      "acc_norm": 0.58,
+      "acc_norm_stderr": 0.040433888371749035
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_no_neutral_task|0": {
+      "acc_norm": 0.8017510944340213,
+      "acc_norm_stderr": 0.004459057862794493
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_task|0": {
+      "acc_norm": 0.5289407839866556,
+      "acc_norm_stderr": 0.006447374696534835
+    },
+    "community|alghafa:multiple_choice_sentiment_task|0": {
+      "acc_norm": 0.4005813953488372,
+      "acc_norm_stderr": 0.011818777544502406
+    },
+    "community|alghafa:_average|0": {
+      "acc_norm": 0.5463476856672431,
+      "acc_norm_stderr": 0.022696924152653647
+    },
+    "all": {
+      "acc_norm": 0.5463476856672431,
+      "acc_norm_stderr": 0.022696924152653647
+    }
+  },
+  "versions": {
+    "community|alghafa:mcq_exams_test_ar|0": 0,
+    "community|alghafa:meta_ar_dialects|0": 0,
+    "community|alghafa:meta_ar_msa|0": 0,
+    "community|alghafa:multiple_choice_facts_truefalse_balanced_task|0": 0,
+    "community|alghafa:multiple_choice_grounded_statement_soqal_task|0": 0,
+    "community|alghafa:multiple_choice_grounded_statement_xglue_mlqa_task|0": 0,
+    "community|alghafa:multiple_choice_rating_sentiment_no_neutral_task|0": 0,
+    "community|alghafa:multiple_choice_rating_sentiment_task|0": 0,
+    "community|alghafa:multiple_choice_sentiment_task|0": 0
+  },
+  "config_tasks": {
+    "community|alghafa:mcq_exams_test_ar": {
+      "name": "alghafa:mcq_exams_test_ar",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "mcq_exams_test_ar",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 557,
+      "effective_num_docs": 557,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:meta_ar_dialects": {
+      "name": "alghafa:meta_ar_dialects",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "meta_ar_dialects",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 5395,
+      "effective_num_docs": 5395,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:meta_ar_msa": {
+      "name": "alghafa:meta_ar_msa",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "meta_ar_msa",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 895,
+      "effective_num_docs": 895,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_facts_truefalse_balanced_task": {
+      "name": "alghafa:multiple_choice_facts_truefalse_balanced_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_facts_truefalse_balanced_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 75,
+      "effective_num_docs": 75,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_grounded_statement_soqal_task": {
+      "name": "alghafa:multiple_choice_grounded_statement_soqal_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_grounded_statement_soqal_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 150,
+      "effective_num_docs": 150,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_grounded_statement_xglue_mlqa_task": {
+      "name": "alghafa:multiple_choice_grounded_statement_xglue_mlqa_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_grounded_statement_xglue_mlqa_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 150,
+      "effective_num_docs": 150,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_no_neutral_task": {
+      "name": "alghafa:multiple_choice_rating_sentiment_no_neutral_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_rating_sentiment_no_neutral_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 7995,
+      "effective_num_docs": 7995,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_task": {
+      "name": "alghafa:multiple_choice_rating_sentiment_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_rating_sentiment_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 5995,
+      "effective_num_docs": 5995,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    },
+    "community|alghafa:multiple_choice_sentiment_task": {
+      "name": "alghafa:multiple_choice_sentiment_task",
+      "prompt_function": "alghafa_prompt",
+      "hf_repo": "OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "hf_subset": "multiple_choice_sentiment_task",
+      "metric": [
+        "loglikelihood_acc_norm"
+      ],
+      "hf_avail_splits": [
+        "test",
+        "validation"
+      ],
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "validation",
+      "few_shots_select": "sequential",
+      "generation_size": -1,
+      "stop_sequence": null,
+      "output_regex": null,
+      "num_samples": null,
+      "frozen": false,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 1720,
+      "effective_num_docs": 1720,
+      "trust_dataset": null,
+      "must_remove_duplicate_docs": null,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|alghafa:mcq_exams_test_ar|0": {
+      "hashes": {
+        "hash_examples": "c07a5e78c5c0b8fe",
+        "hash_full_prompts": "c07a5e78c5c0b8fe",
+        "hash_input_tokens": "3414d2aa76e22ad3",
+        "hash_cont_tokens": "a441c0a94b52a62c"
+      },
+      "truncated": 0,
+      "non_truncated": 557,
+      "padded": 2228,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:meta_ar_dialects|0": {
+      "hashes": {
+        "hash_examples": "c0b6081f83e14064",
+        "hash_full_prompts": "c0b6081f83e14064",
+        "hash_input_tokens": "16b26159e5ad4966",
+        "hash_cont_tokens": "6333de100c73474d"
+      },
+      "truncated": 0,
+      "non_truncated": 5395,
+      "padded": 21580,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:meta_ar_msa|0": {
+      "hashes": {
+        "hash_examples": "64eb78a7c5b7484b",
+        "hash_full_prompts": "64eb78a7c5b7484b",
+        "hash_input_tokens": "51107e333afc1902",
+        "hash_cont_tokens": "0999e553e86d7267"
+      },
+      "truncated": 0,
+      "non_truncated": 895,
+      "padded": 3563,
+      "non_padded": 17,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_facts_truefalse_balanced_task|0": {
+      "hashes": {
+        "hash_examples": "54fc3502c1c02c06",
+        "hash_full_prompts": "54fc3502c1c02c06",
+        "hash_input_tokens": "bdc43aeb6b2568fd",
+        "hash_cont_tokens": "a5f894a24b74b606"
+      },
+      "truncated": 0,
+      "non_truncated": 75,
+      "padded": 150,
+      "non_padded": 0,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_grounded_statement_soqal_task|0": {
+      "hashes": {
+        "hash_examples": "46572d83696552ae",
+        "hash_full_prompts": "46572d83696552ae",
+        "hash_input_tokens": "84042cd9b3e88ec2",
+        "hash_cont_tokens": "f7637532ffd1e5f3"
+      },
+      "truncated": 0,
+      "non_truncated": 150,
+      "padded": 744,
+      "non_padded": 6,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_grounded_statement_xglue_mlqa_task|0": {
+      "hashes": {
+        "hash_examples": "f430d97ff715bc1c",
+        "hash_full_prompts": "f430d97ff715bc1c",
+        "hash_input_tokens": "70e3ec7d89f382ac",
+        "hash_cont_tokens": "00f904985939ef7d"
+      },
+      "truncated": 0,
+      "non_truncated": 150,
+      "padded": 749,
+      "non_padded": 1,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_no_neutral_task|0": {
+      "hashes": {
+        "hash_examples": "6b70a7416584f98c",
+        "hash_full_prompts": "6b70a7416584f98c",
+        "hash_input_tokens": "f06ec0d7c59403d4",
+        "hash_cont_tokens": "5737c8fee4634974"
+      },
+      "truncated": 0,
+      "non_truncated": 7995,
+      "padded": 15771,
+      "non_padded": 219,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_rating_sentiment_task|0": {
+      "hashes": {
+        "hash_examples": "bc2005cc9d2f436e",
+        "hash_full_prompts": "bc2005cc9d2f436e",
+        "hash_input_tokens": "4337bb30622dd9f3",
+        "hash_cont_tokens": "1269218d2641c408"
+      },
+      "truncated": 0,
+      "non_truncated": 5995,
+      "padded": 16960,
+      "non_padded": 1025,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    },
+    "community|alghafa:multiple_choice_sentiment_task|0": {
+      "hashes": {
+        "hash_examples": "6fb0e254ea5945d8",
+        "hash_full_prompts": "6fb0e254ea5945d8",
+        "hash_input_tokens": "e4f1a25573b7a330",
+        "hash_cont_tokens": "59919e067abb3042"
+      },
+      "truncated": 0,
+      "non_truncated": 1720,
+      "padded": 4949,
+      "non_padded": 211,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "3b59f3a8541ff2cd",
+      "hash_full_prompts": "3b59f3a8541ff2cd",
+      "hash_input_tokens": "d38401c7c9ee77a5",
+      "hash_cont_tokens": "af8e9c993479c34b"
+    },
+    "truncated": 0,
+    "non_truncated": 22932,
+    "padded": 66694,
+    "non_padded": 1479,
+    "num_truncated_few_shots": 0
+  }
+}
