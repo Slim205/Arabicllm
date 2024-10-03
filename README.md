@@ -45,15 +45,7 @@ The table below compares the performance of the base model **Gemma-2-9b-it** and
 
 ## Evaluation
 
-To evaluate the model on the Arabic Leaderboard benchmark, follow these steps:
-
-1. Configure Multiple GPUs using the command:
-
-    ```bash
-    accelerate config
-    ```
-
-2. Run the evaluation script:
+Evaluation script: using https://huggingface.co/spaces/OALL/Open-Arabic-LLM-Leaderboard benchmarks
 
     ```bash
     accelerate launch --multi_gpu --num_processes=2 run_evals_accelerate.py --model_args="pretrained=EleutherAI/pythia-70m,dtype=bfloat16" --custom_tasks community_tasks/arabic_evals.py --tasks examples/tasks/arabic_tasks_0.txt --override_batch_size 32 --save_details --output_dir="./output_arabic_benchmark" --dataset_loading_processes 10
@@ -64,3 +56,4 @@ This command will generate a `.json` file in the `output_arabic_benchmark` direc
 ## Data Link
 
 The full dataset for this project can be found at [Slim205/total_data_baraka_ift](#).
+The model : https://huggingface.co/Slim205/BARKA-9b-it
