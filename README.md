@@ -75,5 +75,6 @@ This command will generate a `.json` file in the `output_arabic_benchmark` direc
 
 The full dataset for this project can be found at [Slim205/total_data_baraka_ift](#).
 
-The model 9B : https://huggingface.co/Slim205/BARKA-9b-it
-The model 2B : https://huggingface.co/Slim205/BARKA-2b-it 
+The 9B model  : https://huggingface.co/Slim205/BARKA-9b-it
+
+The 2B model  : https://huggingface.co/Slim205/BARKA-2b-it 
