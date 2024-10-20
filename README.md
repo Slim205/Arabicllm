@@ -1,4 +1,5 @@
 # ArabicLLM
+![Alt text](phto.png)
 
 ## Project Overview
 The goal of the project was to adapt large language models for the Arabic language and create a new state-of-the-art Arabic LLM. Due to the scarcity of Arabic instruction fine-tuning data, not many LLMs have been trained specifically in Arabic, which is surprising given the large number of Arabic speakers.  
