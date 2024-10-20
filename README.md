@@ -2,7 +2,7 @@
 
 ## Project Overview
 The goal of this project is to adapt large language models for the Arabic language. Due to the scarcity of Arabic instruction fine-tuning data, the focus is on creating a high-quality instruction fine-tuning (IFT) dataset. The project aims to finetune models on this dataset and evaluate their performance across various benchmarks.
-
+ 
 ## Datasets Used
 The following datasets were used for instruction fine-tuning. Each dataset includes the number of instruction and answer tokens:
 
