@@ -19,7 +19,7 @@ This is the approach we used to construct our dataset:
 
 ### Training Settings
 The 2B version was trained for 2 days on 1 A100 GPU using LoRA with a rank of 128, a learning rate of 1e-4, and a cosine learning rate schedule.
-![Alt text](eval_loss.pnj)
+![Alt text](W&B Chart 20_10_2024 00_48_54.png)
 
 ## Datasets Used
 The following datasets were used for instruction fine-tuning. Each dataset includes the number of instruction and answer tokens:
