@@ -1,8 +1,26 @@
 # ArabicLLM
 
 ## Project Overview
-The goal of this project is to adapt large language models for the Arabic language. Due to the scarcity of Arabic instruction fine-tuning data, the focus is on creating a high-quality instruction fine-tuning (IFT) dataset. The project aims to finetune models on this dataset and evaluate their performance across various benchmarks.
- 
+The goal of the project was to adapt large language models for the Arabic language and create a new state-of-the-art Arabic LLM. Due to the scarcity of Arabic instruction fine-tuning data, not many LLMs have been trained specifically in Arabic, which is surprising given the large number of Arabic speakers.  
+Our final model was trained on a high-quality instruction fine-tuning (IFT) dataset, generated synthetically and then evaluated using the Hugging Face Arabic leaderboard.
+
+## Details
+The methodology introduced:  
+- Generate synthetic data in English  
+- Translate the data to Arabic using NLLB  
+- Fine-tune the Gemma-2-2b-it model using the new data  
+- Evaluate using the Arabic leaderboard benchmarks.
+
+### Synthetic Data
+This is the approach we used to construct our dataset:  
+- Scraping Wikipedia articles about Arabic culture, science, Arab countries, religion, etc.  
+- Generating questions and answers from paragraphs, with 75% of the paragraphs shortened, while ensuring the responses are comprehensive  
+- Generating 3-turn conversational data using the remaining 25% of longer paragraphs: the first multi-turn dataset in Arabic (Slim205/multi_turn_nllb).
+
+### Training Settings
+The 2B version was trained for 2 days on 1 A100 GPU using LoRA with a rank of 128, a learning rate of 1e-4, and a cosine learning rate schedule.
+Here is the information in table format:
+
 ## Datasets Used
 The following datasets were used for instruction fine-tuning. Each dataset includes the number of instruction and answer tokens:
 
