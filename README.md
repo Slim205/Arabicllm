@@ -71,7 +71,7 @@ Evaluation script: using https://huggingface.co/spaces/OALL/Open-Arabic-LLM-Lead
     ```
 
 This command will generate a `.json` file in the `output_arabic_benchmark` directory with the evaluation results for the model **EleutherAI/pythia-70m** over all 137 tasks listed in `arabic_tasks_0.txt`.
-
+ 
 ## Data Link
 
 The full dataset for this project can be found at [Slim205/total_data_baraka_ift](#).
