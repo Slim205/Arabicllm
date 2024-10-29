@@ -2,7 +2,7 @@
 ![Alt text](photo.png)
 
 ## Project Overview
-The goal of the project was to adapt large language models for the Arabic language and create a new state-of-the-art Arabic LLM. Due to the scarcity of Arabic instruction fine-tuning data, not many LLMs have been trained specifically in Arabic, which is surprising given the large number of Arabic speakers.  
+The goal of the project was to adapt large language models for the Arabic language and develop a new state-of-the-art Arabic LLM. Due to the scarcity of Arabic data, few LLMs have been trained specifically for Arabic, falling short of meeting the needs of its vast number of speakers.
 Our final model was trained on a high-quality instruction fine-tuning (IFT) dataset, generated synthetically and then evaluated using the Hugging Face Arabic leaderboard.
 
 ## Details
