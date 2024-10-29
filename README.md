@@ -74,7 +74,7 @@ This command will generate a `.json` file in the `output_arabic_benchmark` direc
  
 ## Data Link
 
-The full dataset for this project can be found at [Slim205/total_data_baraka_ift](#).
+The full dataset for this project can be found at https://huggingface.co/datasets/Slim205/Barka_data_2B.
 
 The 9B model  : https://huggingface.co/Slim205/BARKA-9b-it : Better than Llama-3.1-70B-Instruct, Gemma-2-27b-it in the Arabic Leaderboard
 
